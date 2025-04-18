@@ -84,44 +84,124 @@
                     <h3>Épicas</h3>
                     <p>Las épicas son esenciales porque proporcionan una visión general de las funcionalidades del producto, ayudan a priorizar tareas y permiten descomponer el trabajo en historias de usuario más manejables. Fomentan la colaboración entre el equipo y los stakeholders, ofrecen flexibilidad ante cambios en los requisitos y facilitan el seguimiento del progreso, asegurando que el trabajo esté alineado con los objetivos estratégicos de la organización y maximizando el impacto de las entregas.</p>
 
-                    <h4>Épica 1: Página de bienvenida</h4>
-                    <p><strong>Descripción:</strong> El sistema debe presentar una página de bienvenida cuando se ingrese al sitio web, funcionando como una “landing page” atractiva visualmente, con fácil acceso a las principales secciones y manteniendo una carga rápida.</p>
+                    <h4>Épica 1: Registro y gestión de pacientes</h4>
+                    <p><strong>Descripción:</strong> El sistema debe permitir registrar y gestionar los datos de los pacientes de forma segura y accesible, incluyendo información personal, antecedentes médicos y tratamientos anteriores.
+                    </p>
                     <h5>Criterios de éxito:</h5>
                     <ul>
-                        <li>Diseño Visual Atractivo: La página debe contar con colores vibrantes, imágenes de alta calidad y videos integrados para captar la atención del usuario.</li>
-                        <li>Carga Ágil: A pesar del contenido visual, la página debe estar optimizada para cargar rápidamente en diferentes dispositivos y conexiones a internet, asegurando una buena experiencia de usuario.</li>
-                        <li>Facilidad de Navegación: La interfaz debe ser sencilla y amigable, permitiendo al usuario navegar de manera intuitiva.</li>
-                        <li>Footer: Incluir columnas con el logo, horario de atención, enlaces a redes sociales y secciones clave.</li>
-                        <li>Barra de Navegación: Debe incluir secciones como Sobre nosotros, Servicios, Precios, Ubícanos y Reservas.</li>
+                        <li>Formulario Intuitivo de Registro: El sistema debe contar con formularios amigables que recopilen datos relevantes como nombre, DNI, edad, historial médico y contacto de emergencia.</li>
+                        <li>Búsqueda Rápida de Pacientes: El personal debe poder buscar pacientes fácilmente por nombre, DNI o fecha de nacimiento.</li>
+                        <li>Historial Clínico Accesible: El odontólogo puede revisar los tratamientos anteriores de cada paciente para tomar mejores decisiones en sus citas actuales.</li>
+                        <li>Protección de Datos: El sistema debe cumplir con normas de protección de datos, garantizando la privacidad de la información del paciente.</li>
                     </ul>
 
-                    <h4>Épica 2: Gestión de Citas de Clientes</h4>
-                    <p><strong>Descripción:</strong> El sistema debe permitir la gestión eficiente de citas odontológicas, proporcionando información de horarios y días disponibles.</p>
+                    <h4>Épica 2:  Gestión de citas odontológicas</h4>
+                    <p><strong>Descripción:</strong>El sistema debe permitir a los pacientes agendar, reprogramar o cancelar citas en línea, mientras que el personal puede administrar y visualizar las agendas diarias y semanales.</p>
                     <h5>Criterios de éxito:</h5>
                     <ul>
-                        <li>Los clientes pueden reservar citas en línea.</li>
-                        <li>El sistema genera recordatorios automáticos vía email o SMS.</li>
-                        <li>El sistema refleja la disponibilidad en tiempo real, evitando reservas duplicadas.</li>
-                        <li>Sección de administrador donde se visualizan todas las citas pendientes y atendidas.</li>
+                        <li>Reserva Online de Citas: Los pacientes pueden elegir fecha y hora desde un calendario con disponibilidad actualizada.</li>
+                        <li>Recordatorios Automáticos: El sistema debe enviar recordatorios vía email o mensaje SMS antes de la cita para reducir inasistencias.</li>
+                        <li>Panel Administrativo: El personal puede visualizar todas las citas del día, ver el estado (pendiente, atendida, cancelada) y reorganizar según necesidad.</li>
+                        <li>Evitar Doble Reserva: El sistema bloquea automáticamente los espacios ocupados y sincroniza los cambios en tiempo real.</li>
                     </ul>
 
-                    <h4>Épica 3: Gestión de contenido del sitio Web</h4>
-                    <p><strong>Descripción:</strong> El sistema debe permitir agregar o modificar contenido visible en el sitio web como un CMS.</p>
+                    <h4>Épica 3: Control de tratamientos y procedimientos</h4>
+                    <p><strong>Descripción:</strong> El sistema debe permitir al odontólogo registrar tratamientos realizados, diagnósticos y observaciones en cada cita, generando un historial clínico detallado por paciente.</p>
                     <h5>Criterios de éxito:</h5>
                     <ul>
-                        <li>Facilidad de Uso: Los administradores pueden acceder a un panel de control para editar y actualizar las secciones del sitio web.</li>
-                        <li>Gestión de Promociones: Los administradores pueden actualizar promociones de forma ágil.</li>
-                        <li>Previsualización de Cambios: Antes de publicar, el CMS debe ofrecer una opción de previsualización.</li>
+                        <li>Formulario por Tipo de Tratamiento: El odontólogo puede elegir entre tratamientos como limpieza, ortodoncia, endodoncia, etc., y registrar detalles específicos.</li>
+                        <li>Adjuntar Imágenes: Posibilidad de subir radiografías u otras imágenes clínicas al historial del paciente.</li>
+                        <li>Seguimiento de Tratamientos: El sistema permite ver la evolución de tratamientos prolongados y programar futuras sesiones según necesidad.</li>
+                        <li>Exportar Información Clínica: Posibilidad de exportar o imprimir informes clínicos para derivaciones o respaldo.</li>
+                    </ul>
+
+                    <h4>Épica 4: Gestión de pagos y facturación</h4>
+                    <p><strong>Descripción:</strong>El sistema debe facilitar el registro de pagos por tratamientos realizados, emitir comprobantes y generar reportes financieros para el control contable.</p>
+                    <h5>Criterios de éxito:</h5>
+                    <ul>
+                        <li>Registro de Pagos por Paciente: Se puede registrar el monto, fecha y método de pago de cada atención.</li>
+                        <li>Generación de Factura/Boleta: El sistema genera un comprobante al finalizar el tratamiento y lo puede enviar por email.</li>
+                        <li>Historial de Pagos: Tanto el paciente como el personal pueden consultar los pagos realizados y pendientes.</li>
+                        <li>Reportes Financieros: Generación de reportes diarios, semanales o mensuales para control interno o declaraciones contables.</li>
                     </ul>
                 </div>
 
                 <div id="prototipos" class="content-section">
                     <h2>Prototipos</h2>
-                    <p><strong>Delina:</strong> Chica alegre de 31 años, busca rapidez en la reserva de citas odontológicas y no quiere procesos complicados.</p>
-                    <p><strong>Estefany:</strong> Reservada, prefiere métodos de pago como Yape y busca eficiencia en el servicio.</p>
-                    <p><strong>María:</strong> Perfeccionista, le molesta la lentitud en la carga de páginas web.</p>
-                    <p><strong>Elisabeth:</strong> Indecisa, busca información detallada sobre servicios y características antes de tomar decisiones.</p>
-                </div>
+                  
+                    <div class="tabs">
+                      <button class="tab-button active" onclick="showTab('carla')">Carla</button>
+                      <button class="tab-button" onclick="showTab('andrea')">Andrea</button>
+                      <button class="tab-button" onclick="showTab('monica')">Mónica</button>
+                      <button class="tab-button" onclick="showTab('luis')">Luis</button>
+                    </div>
+                  
+                    <div id="carla" class="tab-content active">
+                      <p><strong>Carla:</strong> Es una joven de 24 años que lleva una vida bastante agitada entre el trabajo y sus estudios universitarios. Vive en Surco y valora mucho su tiempo, por lo que cuando necesita atención odontológica busca soluciones rápidas y efectivas. No le agradan los formularios largos ni los procesos complejos, por lo que espera poder reservar una cita desde su celular en menos de dos minutos. Carla se siente más cómoda cuando el sitio web es rápido, visualmente limpio y con buena organización. Aprecia mucho recibir recordatorios automáticos por correo o WhatsApp, ya que suele olvidar sus compromisos por su apretada agenda.</p>
+                    </div>
+                  
+                    <div id="andrea" class="tab-content">
+                      <p><strong>Andrea:</strong> Es contadora independiente y vive en San Borja. Tiene 31 años. Se caracteriza por ser una mujer analítica y detallista, especialmente cuando se trata de su salud. Antes de asistir a una consulta odontológica, investiga a profundidad sobre los tratamientos, materiales usados y la experiencia del profesional. Le gusta que los servicios estén bien explicados y con precios claros. Se siente más segura cuando puede ver imágenes del procedimiento, videos explicativos o testimonios de otros pacientes. Una sección de servicios detallada y visual en el sitio web es esencial para que Andrea confíe y decida reservar una cita.</p>
+                    </div>
+                  
+                    <div id="monica" class="tab-content">
+                      <p><strong>Mónica:</strong> Tiene 39 años y es ama de casa. Suele encargarse de la organización del hogar, incluida la salud de sus hijos y esposo. Ella es metódica y le gusta tener todo agendado, por lo que valora que el sistema de reservas de citas odontológicas le permita gestionar múltiples pacientes desde una sola cuenta. Aprecia mucho recibir recordatorios de las citas y le incomoda tener que repetir información o procesos innecesarios. En cuanto a los pagos, prefiere opciones rápidas como Yape y le resulta importante recibir una boleta o comprobante tras cada atención.</p>
+                    </div>
+                  
+                    <div id="luis" class="tab-content">
+                      <p><strong>Luis:</strong> Tiene 28 años y trabaja como diseñador gráfico freelance. Al navegar por internet, busca eficiencia y diseño visual atractivo. Sin embargo, pierde la paciencia rápidamente si una página web es lenta o difícil de usar. Luis accede tanto desde su laptop como desde el celular y se frustra si el sitio no está optimizado para ambos. Le gusta que las páginas carguen en pocos segundos, que la información sea clara, y que pueda realizar todo el proceso de reserva sin complicaciones ni pasos innecesarios. Para él, una buena experiencia de usuario es determinante para volver a usar el servicio o recomendarlo.</p>
+                    </div>
+                  </div>
+                  
+                  <style>
+                    .tabs {
+                      margin-bottom: 1em;
+                    }
+                  
+                    .tab-button {
+                      padding: 10px 20px;
+                      margin-right: 5px;
+                      border: none;
+                      background-color: #eee;
+                      cursor: pointer;
+                      border-radius: 5px 5px 0 0;
+                    }
+                  
+                    .tab-button.active {
+                      background-color: #ccc;
+                      font-weight: bold;
+                    }
+                  
+                    .tab-content {
+                      display: none;
+                      padding: 1em;
+                      background-color: #f9f9f9;
+                      border: 1px solid #ccc;
+                      border-top: none;
+                      border-radius: 0 0 5px 5px;
+                    }
+                  
+                    .tab-content.active {
+                      display: block;
+                    }
+                  </style>
+                  
+                  <script>
+                    function showTab(tabId) {
+                      document.querySelectorAll('.tab-content').forEach(tab => {
+                        tab.classList.remove('active');
+                      });
+
+                      document.querySelectorAll('.tab-button').forEach(button => {
+                        button.classList.remove('active');
+                      });
+
+                      document.getElementById(tabId).classList.add('active');
+                
+                      event.target.classList.add('active');
+                    }
+                  </script>
+                  
             </div>
         </div>
     </div>
