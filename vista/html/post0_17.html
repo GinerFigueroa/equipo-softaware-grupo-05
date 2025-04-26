@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17. Retrospectiva del Sprint - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .retrospective-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .retrospective-table th, .retrospective-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .retrospective-table th {
+            background-color: #f2f2f2;
+        }
+        .retrospective-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .improvement-box {
+            background-color: #e2f3f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .action-item {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+        .category-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            color: white;
+        }
+        .keep-doing { background-color: #2ecc71; }
+        .start-doing { background-color: #3498db; }
+        .stop-doing { background-color: #e74c3c; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../index.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/retrospectiva-sprint.jpg" alt="Retrospectiva del Sprint" class="header-image">
+            <h1>17. Retrospectiva del Sprint</h1>
+        </header>
+        
+        <div class="index-container">
+            <div class="index-list">
+                <h2>Índice de Contenidos</h2>
+                <ul>
+                    <li class="index-item" data-target="entradas">ENTRADAS</li>
+                    <li class="index-item" data-target="salidas-demo">SALIDAS DE DEMOSTRAR Y VALIDAR EL SPRINT</li>
+                    <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+                    <li class="index-item" data-target="reunion">Reunión de Retrospectiva del Sprint</li>
+                    <li class="index-item" data-target="salidas">SALIDAS</li>
+                </ul>
+            </div>
+            
+            <div class="content-area">
+                <!-- ENTRADAS -->
+                <div id="entradas" class="content-section">
+                    <h2>ENTRADAS</h2>
+                    <p>La retrospectiva del sprint es una reunión donde el equipo Scrum reflexiona sobre el sprint recién completado para identificar mejoras en el proceso y la colaboración, con el objetivo de aumentar la calidad y efectividad en el próximo sprint.</p>
+                </div>
+
+                <!-- SALIDAS DE DEMOSTRAR Y VALIDAR EL SPRINT -->
+                <div id="salidas-demo" class="content-section">
+                    <h2>SALIDAS DE DEMOSTRAR Y VALIDAR EL SPRINT</h2>
+                    
+                    <table class="retrospective-table">
+                        <tr>
+                            <th>Historia de Usuario</th>
+                            <th>Criterios de Aceptación / Entregables</th>
+                            <th>Aceptado</th>
+                            <th>Rechazado</th>
+                        </tr>
+                        <tr>
+                            <td>Historia 1: Página web atractiva</td>
+                            <td>
+                                1. Se implementó una página web atractiva con colores vibrantes coherentes con la identidad del negocio.<br>
+                                2. Las imágenes se muestran en alta definición y están optimizadas, garantizando que no afecten el rendimiento de carga.<br>
+                                3. El contenido visual carga completamente en menos de 2 segundos en dispositivos móviles y de escritorio.
+                            </td>
+                            <td>[X]</td>
+                            <td>[ ]</td>
+                        </tr>
+                        <tr>
+                            <td>Historia 2: Barra de navegación</td>
+                            <td>
+                                1. La barra de navegación es clara, accesible, y visible en la parte superior en todas las resoluciones (diseño responsive).<br>
+                                2. Permite al usuario acceder a las secciones clave con un máximo de dos clics.<br>
+                                3. Todos los enlaces de la barra de navegación son funcionales y llevan al contenido correcto.
+                            </td>
+                            <td>[X]</td>
+                            <td>[ ]</td>
+                        </tr>
+                        <tr>
+                            <td>Historia 3: Ubicación del negocio</td>
+                            <td>
+                                1. El mapa de Google Maps ha sido integrado correctamente.<br>
+                                2. La ubicación del negocio se muestra con una marca visible.<br>
+                                3. El mapa es interactivo, permitiendo acercar y alejar el zoom.
+                            </td>
+                            <td>[X]</td>
+                            <td>[ ]</td>
+                        </tr>
+                        <tr>
+                            <td>Historia 4: Galería de servicios</td>
+                            <td>
+                                1. La galería muestra una cuadrícula de 3x3 imágenes en alta calidad.<br>
+                                2. Las imágenes y vídeos están optimizados para cargar rápidamente en diferentes dispositivos.<br>
+                                3. Al hacer clic en una imagen, esta se expande para una visualización detallada.
+                            </td>
+                            <td>[X]</td>
+                            <td>[ ]</td>
+                        </tr>
+                        <tr>
+                            <td>Historia 5: Registro de usuarios</td>
+                            <td>
+                                1. El proceso de registro está habilitado mediante la vinculación con Google.<br>
+                                2. El proceso de vinculación con Google es rápido, con no más de dos pasos, y asegura la creación correcta de la cuenta.
+                            </td>
+                            <td>[X]</td>
+                            <td>[ ]</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- HERRAMIENTAS -->
+                <div id="herramientas" class="content-section">
+                    <h2>HERRAMIENTAS</h2>
+                    <p>Para la retrospectiva del sprint se utilizaron las siguientes herramientas:</p>
+                    <ul>
+                        <li>Pizarra virtual colaborativa (Miro o similar)</li>
+                        <li>Plantilla de retrospectiva con las categorías: Seguir haciendo, Empezar a hacer, Dejar de hacer</li>
+                        <li>Sistema de votación para priorizar mejoras</li>
+                        <li>Documento compartido para registrar acuerdos</li>
+                    </ul>
+                </div>
+
+                <!-- REUNIÓN DE RETROSPECTIVA -->
+                <div id="reunion" class="content-section">
+                    <h2>Reunión de Retrospectiva del Sprint</h2>
+                    <p>La reunión de retrospectiva se llevó a cabo el <strong>26 de abril de 2025</strong> con la participación de todo el equipo Scrum:</p>
+                    
+                    <div class="improvement-box">
+                        <h3>Dinámica de la reunión</h3>
+                        <ol>
+                            <li>Revisión de los objetivos del sprint (10 min)</li>
+                            <li>Identificación de aspectos positivos a mantener (15 min)</li>
+                            <li>Detección de oportunidades de mejora (15 min)</li>
+                            <li>Discusión de problemas y obstáculos (15 min)</li>
+                            <li>Priorización y definición de acciones concretas (20 min)</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="section-claseImagen">
+                        <img src="../img/retrospective-meeting.jpg" alt="Reunión de retrospectiva" class="header-image">
+                        <p class="image-caption">Equipo participando en la retrospectiva del sprint</p>
+                    </div>
+                </div>
+
+                <!-- SALIDAS -->
+                <div id="salidas" class="content-section">
+                    <h2>SALIDAS</h2>
+                    <h3>Agreed Actionable Improvements</h3>
+                    
+                    <div class="action-item">
+                        <span class="category-badge keep-doing">Seguir haciendo</span>
+                        <h4>Mantener la optimización de imágenes para asegurar un tiempo de carga bajo</h4>
+                        <p><strong>Responsable:</strong> Emely, Danahe</p>
+                    </div>
+                    
+                    <div class="action-item">
+                        <span class="category-badge keep-doing">Seguir haciendo</span>
+                        <h4>Continuar verificando enlaces y funcionalidad en cada nueva implementación de la barra de navegación</h4>
+                        <p><strong>Responsable:</strong> Giner</p>
+                    </div>
+                    
+                    <div class="action-item">
+                        <span class="category-badge keep-doing">Seguir haciendo</span>
+                        <h4>Revisar la accesibilidad en dispositivos móviles con pruebas regulares de diseño responsive</h4>
+                        <p><strong>Responsable:</strong> Alejandro</p>
+                    </div>
+                    
+                    <div class="action-item">
+                        <span class="category-badge keep-doing">Seguir haciendo</span>
+                        <h4>Mantener la revisión del equipo en todos los entregables antes de la presentación</h4>
+                        <p><strong>Responsable:</strong> Todo el equipo</p>
+                    </div>
+                    
+                    <div class="action-item">
+                        <span class="category-badge start-doing">Empezar a hacer</span>
+                        <h4>Realizar pruebas exhaustivas del flujo de registro con Google para asegurar una integración fluida y rápida</h4>
+                        <p><strong>Responsable:</strong> Giner-Alejandro</p>
+                    </div>
+                    
+                    <div class="action-item">
+                        <span class="category-badge start-doing">Empezar a hacer</span>
+                        <h4>Mejorar la documentación técnica de cada entrega para que esté completa y fácil de comprender para futuros desarrollos</h4>
+                        <p><strong>Responsable:</strong> Todo el equipo</p>
+                    </div>
+                    
+                    <div class="action-item">
+                        <span class="category-badge start-doing">Empezar a hacer</span>
+                        <h4>Evaluar periódicamente la integración de Google Maps para garantizar que la interacción (zoom y navegación) sea fluida</h4>
+                        <p><strong>Responsable:</strong> Emely-Danahe</p>
+                    </div>
+                    
+                    <div class="action-item">
+                        <span class="category-badge stop-doing">Dejar de hacer</span>
+                        <h4>Evitar agregar nuevas funcionalidades sin evaluarlo previamente</h4>
+                        <p><strong>Responsable:</strong> Todo el equipo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

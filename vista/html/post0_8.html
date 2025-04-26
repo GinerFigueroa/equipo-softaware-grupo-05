@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimación de Historias de Usuario - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .estimation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .estimation-table th, .estimation-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .estimation-table th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        .estimation-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .user-story-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+        .planning-poker-img {
+            max-width: 300px;
+            margin: 15px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../index.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/Estimar-historia-paciente.jpg" alt="Estimación de Historias de Usuario" class="header-image">
+            <h1>8. Estimar Historias de Usuario</h1>
+        </header>
+        
+        <div class="index-container">
+            <div class="index-list">
+                <h2>Índice de Contenidos</h2>
+                <ul>
+                    <li class="index-item" data-target="entradas">ENTRADAS</li>
+                    <li class="index-item" data-target="equipo-scrum">Equipo Principal de Scrum</li>
+                    <li class="index-item" data-target="historias">Historias de Usuario</li>
+                    <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+                    <li class="index-item" data-target="salidas">SALIDAS</li>
+                </ul>
+            </div>
+            
+            <div class="content-area">
+                <div id="entradas" class="content-section">
+                    <h2>ENTRADAS</h2>
+                    <p>La estimación de historias de usuario es fundamental en la metodología Scrum para el sistema odontológico ZAZDENT, ya que permite cuantificar el esfuerzo requerido para implementar cada funcionalidad. Este proceso ayuda al equipo a planificar sprints realistas y gestionar adecuadamente el backlog del producto.</p>
+                
+                    <div class="section-claseImagen">
+                        <img src="../img/estimaciónusuario.jpg" alt="Importancia de la estimación en Scrum" class="header-image">
+                        <p class="image-caption"></p>
+                    </div>
+                </div>
+
+                <div id="equipo-scrum" class="content-section">
+                    <h2>Equipo principal de Scrum</h2>
+                    <p><strong>Scrum Master:</strong> Sánchez Andrés</p>
+                    <p><strong>Product Owner:</strong> Bonifacio Dharma</p>
+                    <p><strong>Equipo de desarrollo:</strong></p>
+                    <ul>
+                        <li>Cañazaca Vasquez, Emily Lorena</li>
+                        <li>Gutiérrez Gutierrez, Danahe Arleni</li>
+                        <li>Figueroa Gonzalez, Giner Bush</li>
+                        <li>Escobar Mejia, Alejandro Maycoll</li>
+                    </ul>
+                </div>
+
+                <div id="historias" class="content-section">
+                    <h2>Historias de Usuario a Estimar</h2>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 1: Agendar una cita</h3>
+                        <p><strong>Como</strong> paciente, <strong>quiero</strong> agendar una cita desde la página web, <strong>para</strong> reservar una atención odontológica fácilmente.</p>
+                    </div>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 2: Ver los tratamientos disponibles</h3>
+                        <p><strong>Como</strong> visitante del sitio, <strong>quiero</strong> ver una lista de los tratamientos dentales ofrecidos, <strong>para</strong> saber qué servicios puedo recibir en la clínica.</p>
+                    </div>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 3: Conocer al equipo odontológico</h3>
+                        <p><strong>Como</strong> paciente nuevo, <strong>quiero</strong> ver los perfiles del personal de salud, <strong>para</strong> sentir confianza con quienes me atenderán.</p>
+                    </div>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 4: Reportes financieros</h3>
+                        <p><strong>Como</strong> propietario, <strong>quiero</strong> acceder a reportes financieros y de productividad, <strong>para</strong> tomar decisiones estratégicas sobre el consultorio.</p>
+                    </div>
+                </div>
+
+                <div id="herramientas" class="content-section">
+                    <h2>HERRAMIENTAS</h2>
+                    <h3>Métodos de Estimación</h3>
+                    <p>Para estimar las historias de usuario del sistema odontológico, el equipo utilizará el método <strong>Planning Poker</strong>, una técnica colaborativa que fomenta la discusión y el consenso sobre el esfuerzo requerido para cada historia.</p>
+                    
+                    <p>El equipo utilizará la siguiente escala de Fibonacci modificada para las estimaciones:</p>
+                    <ul>
+                        <li>1 punto - Muy sencillo (ej. cambios menores)</li>
+                        <li>3 puntos - Sencillo (ej. componente simple)</li>
+                        <li>5 puntos - Moderado (ej. componente con integraciones)</li>
+                        <li>8 puntos - Complejo (ej. múltiples componentes)</li>
+                        <li>13 puntos - Muy complejo (ej. requiere investigación)</li>
+                    </ul>
+                    
+                    <div class="section-claseImagen">
+                        <img src="../img/planning-poker.jpg" alt="Planning Poker en acción" class="planning-poker-img">
+                        <p class="image-caption">Sesión de Planning Poker para estimación de historias</p>
+                    </div>
+                </div>
+
+                <div id="salidas" class="content-section">
+                    <h2>SALIDAS</h2>
+                    <h3>Estimaciones de Historias de Usuario</h3>
+                    <p>El equipo ha estimado el esfuerzo requerido para cada historia de usuario mediante consenso en la sesión de Planning Poker:</p>
+                    
+                    <table class="estimation-table">
+                        <tr>
+                            <th>ID</th>
+                            <th>Historia de Usuario</th>
+                            <th>Estimación (puntos)</th>
+                            <th>Comentarios</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Agendar una cita</td>
+                            <td>8</td>
+                            <td>Requiere integración con calendario y notificaciones</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ver los tratamientos disponibles</td>
+                            <td>5</td>
+                            <td>Componente de catálogo con imágenes y descripciones</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Conocer al equipo odontológico</td>
+                            <td>3</td>
+                            <td>Página estática con perfiles del equipo</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Reportes financieros</td>
+                            <td>13</td>
+                            <td>Requiere integración con sistema contable y gráficos</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>Planificación de Sprints</h3>
+                    <p>Basado en la capacidad del equipo (20 puntos/sprint), la planificación inicial sería:</p>
+                    <ul>
+                        <li><strong>Sprint 1:</strong> Historias 2 y 3 (8 puntos total)</li>
+                        <li><strong>Sprint 2:</strong> Historia 1 (8 puntos)</li>
+                        <li><strong>Sprint 3:</strong> Historia 4 (13 puntos, posible división)</li>
+                    </ul>
+                    
+                    <div class="section-claseImagen">
+                        <img src="../img/planificacion-sprints.jpg" alt="Planificación de sprints" class="header-image">
+                        <p class="image-caption"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historias de Usuario - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .user-story {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+        .acceptance-criteria {
+            background-color: #e2f3f7;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+        .user-story h3 {
+            color: #17a2b8;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../index.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/crear-historia-usuario.jpg" alt="ZAZDENT Estudio" class="header-image">
+            <h1>7. Crear Historias de Usuario </h1>
+        </header>
+        
+        <div class="index-container">
+            <div class="index-list">
+                <h2>Índice de Contenidos</h2>
+                <ul>
+                    <li class="index-item" data-target="entradas">ENTRADAS</li>
+                    <li class="index-item" data-target="equipo-scrum">Equipo Principal de Scrum</li>
+                    <li class="index-item" data-target="backlog">Backlog priorizado del producto</li>
+                    <li class="index-item" data-target="criterios">Criterios de terminado</li>
+                    <li class="index-item" data-target="prototipos">Prototipos</li>
+                    <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+                    <li class="index-item" data-target="salidas">SALIDAS</li>
+                </ul>
+            </div>
+            
+            <div class="content-area">
+                <div id="entradas" class="content-section">
+                    <h2>ENTRADAS</h2>
+                    <p>Las historias de usuario para el sistema odontológico ZAZDENT deben reflejar las necesidades de todos los stakeholders identificados, desde los propietarios hasta los pacientes, asegurando que el sistema cubra tanto los aspectos clínicos como administrativos del consultorio dental.</p>
+                
+                    <div class="section-claseImagen">
+                        <img src="../img/historias-usuario-entradas.jpg" alt="Entradas para historias de usuario" class="header-image">
+                        <p class="image-caption"></p>
+                    </div>
+                </div>
+
+                <div id="equipo-scrum" class="content-section">
+                    <h2>Equipo principal de Scrum</h2>
+                    <p><strong>Scrum Master:</strong> Sánchez Andrés</p>
+                    <p><strong>Product Owner:</strong> Bonifacio Dharma</p>
+                    <p><strong>Equipo de desarrollo:</strong></p>
+                    <ul>
+                        <li>Cañazaca Vasquez, Emily Lorena</li>
+                        <li>Gutiérrez Gutierrez, Danahe Arleni</li>
+                        <li>Figueroa Gonzalez, Giner Bush</li>
+                        <li>Escobar Mejia, Alejandro Maycoll</li>
+                    </ul>
+                </div>
+
+                <div id="backlog" class="content-section">
+                    <h2>Backlog priorizado del producto</h2>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Épica</th>
+                            <th>Prioridad (MoSCoW)</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Gestión de pacientes y citas</td>
+                            <td>Must Have</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Historial clínico digital</td>
+                            <td>Must Have</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Gestión financiera y facturación</td>
+                            <td>Must Have</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Portal de información para pacientes</td>
+                            <td>Should Have</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Gestión de inventario</td>
+                            <td>Could Have</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="criterios" class="content-section">
+                    <h2>Criterios de terminado</h2>
+                    <ul>
+                        <li>Todas las funcionalidades probadas en diferentes dispositivos y navegadores</li>
+                        <li>Cumplimiento de estándares de accesibilidad WCAG</li>
+                        <li>Documentación técnica y de usuario completa</li>
+                        <li>Resolución de todos los bugs identificados</li>
+                        <li>Aprobación por parte de los stakeholders odontológicos</li>
+                        <li>Cumplimiento de regulaciones de protección de datos</li>
+                    </ul>
+                </div>
+
+                <div id="prototipos" class="content-section">
+                    <h2>Prototipos</h2>
+                    
+                    <h3>Dra. Carolay (Odontóloga)</h3>
+                    <p>Profesional dedicada que valora herramientas que le ahorren tiempo en documentación para enfocarse en pacientes. Necesita acceso rápido a historiales durante consultas.</p>
+                    
+                    <h3>Téc. Morelia (Asistente)</h3>
+                    <p>Organizada y meticulosa, necesita sistemas que le ayuden a mantener protocolos de esterilización y preparación de consultorios.</p>
+                    
+                    <h3>Sr. Diego (Propietario/Contador)</h3>
+                    <p>Enfocado en la rentabilidad del negocio, necesita datos precisos en tiempo real para tomar decisiones financieras.</p>
+                    
+                    <div class="section-claseImagen">
+                        <img src="../img/protototipo.jpg" alt="Prototipos de usuarios" class="header-image">
+                        <p class="image-caption"></p>
+                    </div>
+                </div>
+
+                <div id="herramientas" class="content-section">
+                    <h2>HERRAMIENTAS</h2>
+                    <h3>Experiencia en la redacción de historias de usuario</h3>
+                    <p>El Product Owner utilizará el formato estándar "Como [rol], quiero [función] para [beneficio]" para garantizar historias claras y accionables. Cada historia incluirá:</p>
+                    <ul>
+                        <li>Criterios de aceptación específicos</li>
+                        <li>Priorización según metodología MoSCoW</li>
+                        <li>Estimación de esfuerzo en story points</li>
+                        <li>Relación con objetivos del negocio</li>
+                    </ul>
+                </div>
+
+                <div id="salidas" class="content-section">
+                    <h2>SALIDAS</h2>
+                    <h3>Historias de usuario</h3>
+                    
+                    <div class="user-story">
+                        <h3>Historia 1: Agendar una cita</h3>
+                        <p><strong>Como</strong> paciente,</p>
+                        <p><strong>quiero</strong> agendar una cita desde la página web,</p>
+                        <p><strong>para</strong> reservar una atención odontológica fácilmente.</p>
+                        
+                        <div class="acceptance-criteria">
+                            <h4>Criterios de Aceptación:</h4>
+                            <ul>
+                                <li>El formulario debe solicitar nombre, teléfono, tratamiento y fecha</li>
+                                <li>Debe confirmarse la cita por WhatsApp o correo electrónico</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="user-story">
+                        <h3>Historia 2: Ver los tratamientos disponibles</h3>
+                        <p><strong>Como</strong> visitante del sitio,</p>
+                        <p><strong>quiero</strong> ver una lista de los tratamientos dentales ofrecidos,</p>
+                        <p><strong>para</strong> saber qué servicios puedo recibir en la clínica.</p>
+                        
+                        <div class="acceptance-criteria">
+                            <h4>Criterios de Aceptación:</h4>
+                            <ul>
+                                <li>La lista debe mostrar imágenes y descripción por tratamiento</li>
+                                <li>Al hacer clic debe mostrar más detalles (beneficios, duración)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="user-story">
+                        <h3>Historia 3: Conocer al equipo odontológico</h3>
+                        <p><strong>Como</strong> paciente nuevo,</p>
+                        <p><strong>quiero</strong> ver los perfiles del personal de salud,</p>
+                        <p><strong>para</strong> sentir confianza con quienes me atenderán.</p>
+                        
+                        <div class="acceptance-criteria">
+                            <h4>Criterios de Aceptación:</h4>
+                            <ul>
+                                <li>Mostrar foto, nombre y especialidad de cada odontólogo</li>
+                                <li>Incluir breve resumen de su experiencia profesional</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="user-story">
+                        <h3>Historia 4: Reportes financieros</h3>
+                        <p><strong>Como</strong> propietario,</p>
+                        <p><strong>quiero</strong> acceder a reportes financieros y de productividad,</p>
+                        <p><strong>para</strong> tomar decisiones estratégicas sobre el consultorio.</p>
+                        
+                        <div class="acceptance-criteria">
+                            <h4>Criterios de Aceptación:</h4>
+                            <ul>
+                                <li>Reportes deben incluir ingresos, gastos y ganancias por periodo</li>
+                                <li>Mostrar comparativas con periodos anteriores</li>
+                                <li>Exportable a Excel/PDF</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>Priorización de Historias (Método MoSCoW)</h3>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Historia de Usuario</th>
+                            <th>Prioridad</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Agendar una cita</td>
+                            <td>Must Have</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Reportes financieros</td>
+                            <td>Must Have</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Ver tratamientos disponibles</td>
+                            <td>Should Have</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Conocer al equipo odontológico</td>
+                            <td>Should Have</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

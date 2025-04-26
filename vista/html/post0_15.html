@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15. Refinamiento del Backlog Priorizado - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .estimation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .estimation-table th, .estimation-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .estimation-table th {
+            background-color: #f2f2f2;
+        }
+        .estimation-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .priority-box {
+            background-color: #e2f3f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .epic-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+        .priority-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            color: white;
+        }
+        .must-have { background-color: #e74c3c; }
+        .should-have { background-color: #f39c12; }
+        .could-have { background-color: #3498db; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../index.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/Realizar-Daily-Standup.jpg" alt="Refinamiento del Backlog" class="header-image">
+            <h1>15. Refinamiento del Backlog Priorizado</h1>
+        </header>
+        
+        <div class="index-container">
+            <div class="index-list">
+                <h2>Índice de Contenidos</h2>
+                <ul>
+                    <li class="index-item" data-target="entradas">ENTRADAS</li>
+                    <li class="index-item" data-target="equipo-scrum">Equipo Principal de Scrum</li>
+                    <li class="index-item" data-target="backlog">Backlog Priorizado Actual</li>
+                    <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+                    <li class="index-item" data-target="salidas">SALIDAS</li>
+                </ul>
+            </div>
+            
+            <div class="content-area">
+                <!-- ENTRADAS -->
+                <div id="entradas" class="content-section">
+                    <h2>ENTRADAS</h2>
+                    <p>El refinamiento del backlog es una actividad continua donde el Product Owner y el equipo de desarrollo colaboran para:</p>
+                    <ul>
+                        <li>Detallar y clarificar los ítems del backlog</li>
+                        <li>Establecer criterios de aceptación claros</li>
+                        <li>Priorizar basándose en el valor de negocio</li>
+                        <li>Dividir elementos grandes en historias más pequeñas y manejables</li>
+                    </ul>
+                    
+                    <div class="section-claseImagen">
+                        <img src="../img/refinamiento-backlog-process.jpg" alt="Proceso de refinamiento" class="header-image">
+                        <p class="image-caption">Sesión colaborativa de refinamiento con el equipo Scrum</p>
+                    </div>
+                </div>
+
+                <!-- EQUIPO SCRUM -->
+                <div id="equipo-scrum" class="content-section">
+                    <h2>Equipo Principal de Scrum</h2>
+                    <p><strong>Scrum Master:</strong> Sánchez Andrés</p>
+                    <p><strong>Product Owner:</strong> Bonifacio Dharma</p>
+                    <p><strong>Equipo de desarrollo:</strong></p>
+                    <ul>
+                        <li>Cañazaca Vasquez, Emily Lorena (Frontend)</li>
+                        <li>Gutiérrez Gutierrez, Danahe Arleni (Backend)</li>
+                        <li>Figueroa Gonzalez, Giner Bush (Diseño UI/UX)</li>
+                        <li>Escobar Mejia, Alejandro Maycoll (Full Stack)</li>
+                    </ul>
+                </div>
+
+                <!-- BACKLOG PRIORIZADO -->
+                <div id="backlog" class="content-section">
+                    <h2>Backlog Priorizado Actual</h2>
+                    
+                    <div class="epic-card">
+                        <h3>Épica 1: Experiencia de Usuario Principal</h3>
+                        <table class="estimation-table">
+                            <tr>
+                                <th>ID</th>
+                                <th>Historia de Usuario</th>
+                                <th>Prioridad</th>
+                                <th>Criterios de Aceptación</th>
+                            </tr>
+                            <tr>
+                                <td>US-101</td>
+                                <td>Como usuario, quiero una página de bienvenida clara para entender los servicios</td>
+                                <td><span class="priority-badge must-have">Must Have</span></td>
+                                <td>1. Mostrar logo y eslogan<br>2. Incluir botón de CTA principal</td>
+                            </tr>
+                            <tr>
+                                <td>US-102</td>
+                                <td>Como usuario, quiero navegar fácilmente por las secciones principales</td>
+                                <td><span class="priority-badge must-have">Must Have</span></td>
+                                <td>1. Menú visible en desktop/mobile<br>2. Máximo 3 niveles de profundidad</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="epic-card">
+                        <h3>Épica 2: Gestión de Citas</h3>
+                        <table class="estimation-table">
+                            <tr>
+                                <th>ID</th>
+                                <th>Historia de Usuario</th>
+                                <th>Prioridad</th>
+                                <th>Criterios de Aceptación</th>
+                            </tr>
+                            <tr>
+                                <td>US-201</td>
+                                <td>Como paciente, quiero agendar citas online para ahorrar tiempo</td>
+                                <td><span class="priority-badge must-have">Must Have</span></td>
+                                <td>1. Formulario con campos esenciales<br>2. Confirmación por email</td>
+                            </tr>
+                            <tr>
+                                <td>US-202</td>
+                                <td>Como recepcionista, quiero ver todas las citas programadas</td>
+                                <td><span class="priority-badge should-have">Should Have</span></td>
+                                <td>1. Vista de calendario semanal<br>2. Filtros por especialidad</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- HERRAMIENTAS -->
+                <div id="herramientas" class="content-section">
+                    <h2>HERRAMIENTAS</h2>
+                    
+                    <div class="priority-box">
+                        <h3>Técnica de Priorización MoSCoW</h3>
+                        <ul>
+                            <li><span class="priority-badge must-have">Must Have</span>: Requisitos críticos para el lanzamiento inicial</li>
+                            <li><span class="priority-badge should-have">Should Have</span>: Importantes pero no vitales para el MVP</li>
+                            <li><span class="priority-badge could-have">Could Have</span>: Mejoras deseables que pueden posponerse</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Reunión de Refinamiento</h3>
+                    <p>El equipo realizó una sesión de 2 horas donde:</p>
+                    <ol>
+                        <li>Se revisaron todas las historias con el Product Owner</li>
+                        <li>Se definieron criterios de aceptación claros</li>
+                        <li>Se dividieron historias grandes en unidades más pequeñas</li>
+                        <li>Se priorizó según valor de negocio y dependencias técnicas</li>
+                    </ol>
+                    
+                    <div class="section-claseImagen">
+                        <img src="../img/backlog-refinement-sessioon.jpg" alt="Sesión de refinamiento" class="header-image">
+                        <p class="image-caption">Equipo trabajando en el refinamiento del backlog</p>
+                    </div>
+                </div>
+
+                <!-- SALIDAS -->
+                <div id="salidas" class="content-section">
+                    <h2>SALIDAS</h2>
+                    
+                    <h3>Backlog Refinado y Priorizado</h3>
+                    <table class="estimation-table">
+                        <tr>
+                            <th>Sprint</th>
+                            <th>Épica</th>
+                            <th>Historias</th>
+                            <th>Prioridad</th>
+                            <th>Estimación (puntos)</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Sprint 1</td>
+                            <td>Experiencia UX</td>
+                            <td>US-101, US-102</td>
+                            <td><span class="priority-badge must-have">Must Have</span></td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>Gestión de Citas</td>
+                            <td>US-201</td>
+                            <td><span class="priority-badge must-have">Must Have</span></td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Sprint 2</td>
+                            <td>Gestión de Citas</td>
+                            <td>US-202</td>
+                            <td><span class="priority-badge should-have">Should Have</span></td>
+                            <td>5</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="epic-card">
+                        <h3>Plan de Implementación</h3>
+                        <h4>Sprint 1 (21 puntos)</h4>
+                        <ul>
+                            <li>Implementación de estructura base del sitio (US-101, US-102)</li>
+                            <li>Sistema básico de agendamiento de citas (US-201)</li>
+                        </ul>
+                        
+                        <h4>Sprint 2 (5 puntos)</h4>
+                        <ul>
+                            <li>Panel de visualización de citas para recepcionistas (US-202)</li>
+                            <li>Mejoras en UX basadas en feedback inicial</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

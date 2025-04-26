@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificar Tareas - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .task-list {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+        .task-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .task-item:last-child {
+            border-bottom: none;
+        }
+        .user-story-header {
+            background-color: #e2f3f7;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 20px 0 10px 0;
+        }
+        .team-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .team-table th, .team-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .team-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../index.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/identificar-tareas.jpg" alt="Identificar Tareas" class="header-image">
+            <h1>10. Identificar Tareas</h1>
+        </header>
+        
+        <div class="index-container">
+            <div class="index-list">
+                <h2>Índice de Contenidos</h2>
+                <ul>
+                    <li class="index-item" data-target="entradas">ENTRADAS</li>
+                    <li class="index-item" data-target="equipo-scrum">Equipo Principal de Scrum</li>
+                    <li class="index-item" data-target="historias">Historias de usuario comprometidas</li>
+                    <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+                    <li class="index-item" data-target="salidas">SALIDAS</li>
+                </ul>
+            </div>
+            
+            <div class="content-area">
+                <div id="entradas" class="content-section">
+                    <h2>ENTRADAS</h2>
+                    <p>Una vez que el equipo se compromete a completar ciertas historias durante un sprint, es necesario dividirlas en tareas más pequeñas para facilitar la planificación, la asignación de responsabilidades y el seguimiento del progreso. Esta identificación permite al equipo trabajar de manera organizada y eficiente, asegurando que todos los miembros sepan exactamente qué deben hacer para alcanzar los objetivos del sprint y entregar valor al cliente dentro del tiempo establecido.</p>
+                
+                    <div class="section-claseImagen">
+                        <img src="../img/reunionnnnnn.--rrr.png" alt="Importancia de identificar tareas" class="header-image">
+                        <p class="image-caption"></p>
+                    </div>
+                </div>
+
+                <div id="equipo-scrum" class="content-section">
+                    <h2>Equipo principal de Scrum</h2>
+                    <table class="team-table">
+                        <tr>
+                            <th>Rol</th>
+                            <th>Nombre</th>
+                            <th>Especialidad</th>
+                        </tr>
+                        <tr>
+                            <td>Scrum Master</td>
+                            <td>Sánchez Andrés</td>
+                            <td>Gestión ágil</td>
+                        </tr>
+                        <tr>
+                            <td>Product Owner</td>
+                            <td>Bonifacio Dharma</td>
+                            <td>Negocio dental</td>
+                        </tr>
+                        <tr>
+                            <td>Desarrollador Frontend</td>
+                            <td>Cañazaca Vasquez, Emily Lorena</td>
+                            <td>Vue.js, CSS</td>
+                        </tr>
+                        <tr>
+                            <td>Desarrollador Backend</td>
+                            <td>Gutiérrez Gutierrez, Danahe Arleni</td>
+                            <td>Node.js, MongoDB</td>
+                        </tr>
+                        <tr>
+                            <td>Diseñador UI/UX</td>
+                            <td>Figueroa Gonzalez, Giner Bush</td>
+                            <td>Figma, Adobe XD</td>
+                        </tr>
+                        <tr>
+                            <td>Desarrollador Full Stack</td>
+                            <td>Escobar Mejia, Alejandro Maycoll</td>
+                            <td>React, Firebase</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="historias" class="content-section">
+                    <h2>Historias de usuario comprometidas</h2>
+                    
+                    <div class="user-story-header">
+                        <h3>Historia 1: Agendar una cita</h3>
+                        <p><strong>Como</strong> paciente, <strong>quiero</strong> agendar una cita desde la página web, <strong>para</strong> reservar una atención odontológica fácilmente.</p>
+                        <p><strong>Estimación:</strong> 8 puntos</p>
+                    </div>
+                    
+                    <div class="user-story-header">
+                        <h3>Historia 2: Ver los tratamientos disponibles</h3>
+                        <p><strong>Como</strong> visitante del sitio, <strong>quiero</strong> ver una lista de los tratamientos dentales ofrecidos, <strong>para</strong> saber qué servicios puedo recibir en la clínica.</p>
+                        <p><strong>Estimación:</strong> 5 puntos</p>
+                    </div>
+                    
+                    <div class="user-story-header">
+                        <h3>Historia 3: Conocer al equipo odontológico</h3>
+                        <p><strong>Como</strong> paciente nuevo, <strong>quiero</strong> ver los perfiles del personal de salud, <strong>para</strong> sentir confianza con quienes me atenderán.</p>
+                        <p><strong>Estimación:</strong> 3 puntos</p>
+                    </div>
+                </div>
+
+                <div id="herramientas" class="content-section">
+                    <h2>HERRAMIENTAS</h2>
+                    <h3>Reunión del Sprint</h3>
+                    <p>En esta reunión, el equipo Scrum, junto con el Product Owner, desglosa las historias de usuario comprometidas en tareas más pequeñas, asigna responsabilidades y estima el esfuerzo necesario para cada una.</p>
+                    
+                    <p><strong>Proceso seguido:</strong></p>
+                    <ol>
+                        <li>Revisión de cada historia de usuario comprometida</li>
+                        <li>Identificación de las tareas técnicas necesarias</li>
+                        <li>Estimación del tiempo requerido para cada tarea</li>
+                        <li>Asignación de responsables según especialidades</li>
+                        <li>Definición de criterios de completado</li>
+                    </ol>
+                    
+                    <div class="section-claseImagen">
+                        <img src="../img/reunion-tareas.jpg" alt="Reunión de identificación de tareas" class="header-image">
+                        <p class="image-caption">Sesión de desglose de tareas</p>
+                    </div>
+                </div>
+
+                <div id="salidas" class="content-section">
+                    <h2>SALIDAS</h2>
+                    <h3>Lista de tareas</h3>
+                    
+                    <div class="task-list">
+                        <h4>Historia 1: Agendar una cita (8 pts)</h4>
+                        <div class="task-item"><strong>Tarea 1.1:</strong> Diseñar formulario de agendamiento (Figma) - Responsable: Giner (1 día)</div>
+                        <div class="task-item"><strong>Tarea 1.2:</strong> Implementar frontend del formulario - Responsable: Emily (2 días)</div>
+                        <div class="task-item"><strong>Tarea 1.3:</strong> Crear endpoint API para citas - Responsable: Danahe (1 día)</div>
+                        <div class="task-item"><strong>Tarea 1.4:</strong> Conectar frontend con API - Responsable: Alejandro (1 día)</div>
+                        <div class="task-item"><strong>Tarea 1.5:</strong> Implementar validaciones y feedback - Responsable: Emily (1 día)</div>
+                    </div>
+                    
+                    <div class="task-list">
+                        <h4>Historia 2: Ver los tratamientos disponibles (5 pts)</h4>
+                        <div class="task-item"><strong>Tarea 2.1:</strong> Diseñar tarjetas de tratamientos - Responsable: Giner (1 día)</div>
+                        <div class="task-item"><strong>Tarea 2.2:</strong> Crear base de datos de tratamientos - Responsable: Danahe (1 día)</div>
+                        <div class="task-item"><strong>Tarea 2.3:</strong> Implementar vista de tratamientos - Responsable: Emily (1 día)</div>
+                        <div class="task-item"><strong>Tarea 2.4:</strong> Crear modal de detalles - Responsable: Alejandro (1 día)</div>
+                    </div>
+                    
+                    <div class="task-list">
+                        <h4>Historia 3: Conocer al equipo odontológico (3 pts)</h4>
+                        <div class="task-item"><strong>Tarea 3.1:</strong> Recopilar información del equipo - Responsable: Bonifacio (0.5 días)</div>
+                        <div class="task-item"><strong>Tarea 3.2:</strong> Diseñar sección de equipo - Responsable: Giner (1 día)</div>
+                        <div class="task-item"><strong>Tarea 3.3:</strong> Implementar sección en frontend - Responsable: Alejandro (1 día)</div>
+                    </div>
+                    
+                    <h3>Tablero Kanban inicial</h3>
+                    <div class="section-claseImagen">
+                        <img src="../img/kanban-inicial.jpg" alt="Tablero Kanban inicial" class="header-image">
+                        <p class="image-caption">Estado inicial del tablero Kanban con tareas identificadas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

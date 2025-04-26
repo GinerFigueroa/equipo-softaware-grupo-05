@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16. Demostrar y Validar el Sprint - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .estimation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .estimation-table th, .estimation-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .estimation-table th {
+            background-color: #f2f2f2;
+        }
+        .estimation-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .criteria-box {
+            background-color: #e2f3f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .user-story-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+        .acceptance-table {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .acceptance-table td {
+            padding: 8px;
+            vertical-align: top;
+        }
+        .checkbox-cell {
+            text-align: center;
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../index.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/Demostrar-Validar-Sprint.jpg" alt="Demostración del Sprint" class="header-image">
+            <h1>16. Demostrar y Validar el Sprint</h1>
+        </header>
+        
+        <div class="index-container">
+            <div class="index-list">
+                <h2>Índice de Contenidos</h2>
+                <ul>
+                    <li class="index-item" data-target="entradas">ENTRADAS</li>
+                    <li class="index-item" data-target="equipo-scrum">Equipo Principal de Scrum</li>
+                    <li class="index-item" data-target="entregables">ENTREGABLES DEL SPRINT</li>
+                    <li class="index-item" data-target="backlog">SPRINT BACKLOG</li>
+                    <li class="index-item" data-target="criterios">Criterios de Terminado</li>
+                    <li class="index-item" data-target="aceptacion">Criterios de Aceptación</li>
+                    <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+                    <li class="index-item" data-target="revision">REUNIÓN DE REVISIÓN DEL SPRINT</li>
+                    <li class="index-item" data-target="salidas">SALIDAS</li>
+                </ul>
+            </div>
+            
+            <div class="content-area">
+                <!-- ENTRADAS -->
+                <div id="entradas" class="content-section">
+                    <h2>ENTRADAS</h2>
+                    <p>La demostración y validación del sprint es el evento donde el equipo Scrum presenta los incrementos de producto completados durante el sprint a los stakeholders y al Product Owner para su evaluación y retroalimentación.</p>
+                </div>
+
+                <!-- EQUIPO SCRUM -->
+                <div id="equipo-scrum" class="content-section">
+                    <h2>Equipo Principal de Scrum</h2>
+                    <p><strong>Scrum Master:</strong> Sánchez Andrés</p>
+                    <p><strong>Product Owner:</strong> Bonifacio Dharma</p>
+                    <p><strong>Equipo de desarrollo:</strong></p>
+                    <ul>
+                        <li>Cañazaca Vasquez, Emily Lorena (Frontend)</li>
+                        <li>Gutiérrez Gutierrez, Danahe Arleni (Backend)</li>
+                        <li>Figueroa Gonzalez, Giner Bush (Diseño UI/UX)</li>
+                        <li>Escobar Mejia, Alejandro Maycoll (Full Stack)</li>
+                    </ul>
+                </div>
+
+                <!-- ENTREGABLES DEL SPRINT -->
+                <div id="entregables" class="content-section">
+                    <h2>ENTREGABLES DEL SPRINT</h2>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 1: Página web atractiva</h3>
+                        <p>El usuario visitante podrá visualizar una página web atractiva con colores llamativos, imágenes acorde al negocio y en alta definición para captar su atención.</p>
+                    </div>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 2: Barra de navegación</h3>
+                        <p>El usuario podrá navegar por la página mediante una barra de navegación clara y accesible para poder encontrar fácilmente la información que busca.</p>
+                    </div>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 3: Ubicación del negocio</h3>
+                        <p>El usuario podrá conocer la ubicación del negocio mediante un mapa de Google Maps integrado con la ubicación de la sede.</p>
+                    </div>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 4: Galería de servicios</h3>
+                        <p>El usuario podrá explorar el servicio que ofrece el negocio mediante una galería de imágenes y vídeos con un formato adecuado y alta calidad.</p>
+                    </div>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 5: Registro de usuarios</h3>
+                        <p>El usuario podrá registrarse mediante su cuenta de Google.</p>
+                    </div>
+                </div>
+
+                <!-- SPRINT BACKLOG -->
+                <div id="backlog" class="content-section">
+                    <h2>SPRINT BACKLOG</h2>
+                    
+                    <table class="estimation-table">
+                        <tr>
+                            <th>Historia</th>
+                            <th>Tarea</th>
+                            <th>Esfuerzo</th>
+                            <th>Responsable</th>
+                            <th>Prioridad</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Historia 1</td>
+                            <td>Tarea 1.1: Crear el Design system</td>
+                            <td>8</td>
+                            <td>Danahe-Emely-Alejandro-Giner</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 1.2: Implementar Design system</td>
+                            <td>5</td>
+                            <td>Danahe-Emely-Alejandro-Giner</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 1.3: Optimizar imágenes</td>
+                            <td>3</td>
+                            <td>Emely</td>
+                            <td>Media</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Historia 2</td>
+                            <td>Tarea 2.1: Diseñar barra navegación</td>
+                            <td>5</td>
+                            <td>Alejandro</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 2.2: Implementar desktop</td>
+                            <td>3</td>
+                            <td>Giner</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 2.3: Adaptar móvil</td>
+                            <td>3</td>
+                            <td>Emely</td>
+                            <td>Media</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Historia 3</td>
+                            <td>Tarea 3.1: Diseñar sección ubicación</td>
+                            <td>4</td>
+                            <td>Danahe</td>
+                            <td>Media</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 3.2: Implementar ubicación</td>
+                            <td>3</td>
+                            <td>Alejandro</td>
+                            <td>Media</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Historia 4</td>
+                            <td>Tarea 4.1: Diseñar estructura galería</td>
+                            <td>5</td>
+                            <td>Giner</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 4.3: Implementar galería</td>
+                            <td>3</td>
+                            <td>Danahe</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Historia 5</td>
+                            <td>Tarea 5.1: Diseñar interfaz registro</td>
+                            <td>5</td>
+                            <td>Emely-Danahe-Giner-Alejadro</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 5.2: Configurar base de datos</td>
+                            <td>2</td>
+                            <td>Emely</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 5.3: Implementar registro Google</td>
+                            <td>3</td>
+                            <td>Giner</td>
+                            <td>media</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- CRITERIOS DE TERMINADO -->
+                <div id="criterios" class="content-section">
+                    <h2>Criterios de Terminado</h2>
+                    <div class="criteria-box">
+                        <ul>
+                            <li>Todos los miembros del equipo han revisado el diseño visual y la funcionalidad</li>
+                            <li>La página ha pasado todas las pruebas de QA, incluyendo carga rápida, funcionalidad en dispositivos y navegadores diferentes, y optimización del contenido visual</li>
+                            <li>Toda la documentación técnica relacionada a la épica está completada</li>
+                            <li>Se han corregido todos los errores y problemas detectados durante las pruebas</li>
+                            <li>La página de bienvenida ha sido presentada y aprobada por los stakeholders</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CRITERIOS DE ACEPTACIÓN -->
+                <div id="aceptacion" class="content-section">
+                    <h2>Criterios de Aceptación</h2>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 1: Página web atractiva</h3>
+                        <ul>
+                            <li>Los colores del sitio web deben ser vibrantes y coherentes con la identidad del negocio</li>
+                            <li>Las imágenes se deben mostrar en alta definición y deben estar optimizadas para no afectar el rendimiento de carga</li>
+                            <li>El contenido visual debe cargar completamente en menos de 2 segundos en dispositivos móviles y de escritorio</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 2: Barra de navegación</h3>
+                        <ul>
+                            <li>La barra de navegación debe estar visible en la parte superior de la página en todas las resoluciones (responsive design)</li>
+                            <li>Debe permitir al usuario acceder a las secciones clave sin necesidad de más de dos clics</li>
+                            <li>Todos los enlaces de la barra de navegación deben ser funcionales y llevar al contenido correcto</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 3: Ubicación del negocio</h3>
+                        <ul>
+                            <li>El mapa de Google Maps debe estar correctamente integrado</li>
+                            <li>La ubicación del negocio debe mostrarse correctamente con una marca visible en el mapa</li>
+                            <li>El mapa debe ser interactivo y permitir al usuario acercar y alejar el zoom</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 4: Galería de servicios</h3>
+                        <ul>
+                            <li>La galería debe mostrar una cuadrícula de 3x3 imágenes de alta calidad</li>
+                            <li>Las imágenes y videos deben estar optimizados para garantizar una carga rápida en diferentes dispositivos</li>
+                            <li>Al hacer clic en una imagen, esta debe expandirse para una visualización más detallada</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="user-story-card">
+                        <h3>Historia 5: Registro de usuarios</h3>
+                        <ul>
+                            <li>El proceso de registro debe permitir tanto el registro como el inicio de sesión con Google</li>
+                            <li>El proceso de vinculación con Google debe ser rápido, sin más de dos pasos, y asegurar la creación correcta de la cuenta</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- HERRAMIENTAS -->
+                <div id="herramientas" class="content-section">
+                    <h2>HERRAMIENTAS</h2>
+                    <p>Para la demostración y validación del sprint se utilizaron las siguientes herramientas:</p>
+                    <ul>
+                        <li>Plataforma de videoconferencia para reunión remota con stakeholders</li>
+                        <li>Entorno de demostración en vivo con la última versión del producto</li>
+                        <li>Herramientas de seguimiento de feedback (Google Forms o similar)</li>
+                        <li>Sistema de gestión de proyectos (Jira, Trello o similar)</li>
+                    </ul>
+                </div>
+
+                <!-- REUNIÓN DE REVISIÓN -->
+                <div id="revision" class="content-section">
+                    <h2>REUNIÓN DE REVISIÓN DEL SPRINT</h2>
+                    <p>La reunión de revisión se llevó a cabo el <strong>26 de abril de 2025</strong> con los siguientes participantes:</p>
+                    <ul>
+                        <li>Equipo Scrum completo</li>
+                        <li>Stakeholders clave del negocio</li>
+                        <li>Representantes de áreas relacionadas</li>
+                    </ul>
+                    
+                    <div class="criteria-box">
+                        <h3>Agenda de la reunión</h3>
+                        <ol>
+                            <li>Presentación de objetivos del sprint (5 min)</li>
+                            <li>Demostración de cada historia de usuario completada (20 min)</li>
+                            <li>Recolección de feedback de stakeholders (15 min)</li>
+                            <li>Discusión de ajustes y próximos pasos (10 min)</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- SALIDAS -->
+                <div id="salidas" class="content-section">
+                    <h2>SALIDAS</h2>
+                    <h3>Entregables Aceptados</h3>
+                    
+                    <table class="estimation-table">
+                        <tr>
+                            <th>Historia de Usuario</th>
+                            <th>Criterios de Aceptación / Entregables</th>
+                            <th>Aceptado</th>
+                            <th>Rechazado</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">Historia 1: Página web atractiva</td>
+                            <td>Se implementó una página web atractiva con colores vibrantes coherentes con la identidad del negocio</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td>Las imágenes se muestran en alta definición y están optimizadas, garantizando que no afecten el rendimiento de carga</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td>El contenido visual carga completamente en menos de 2 segundos en dispositivos móviles y de escritorio</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Resultado final:</strong></td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">Historia 2: Barra de navegación</td>
+                            <td>La barra de navegación es clara, accesible, y visible en la parte superior en todas las resoluciones (diseño responsive)</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td>Permite al usuario acceder a las secciones clave con un máximo de dos clics</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td>Todos los enlaces de la barra de navegación son funcionales y llevan al contenido correcto</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Resultado final:</strong></td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">Historia 3: Ubicación del negocio</td>
+                            <td>El mapa de Google Maps ha sido integrado correctamente</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td>La ubicación del negocio se muestra con una marca visible</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td>El mapa es interactivo, permitiendo acercar y alejar el zoom</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Resultado final:</strong></td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">Historia 4: Galería de servicios</td>
+                            <td>La galería muestra una cuadrícula de 3x3 imágenes en alta calidad</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td>Las imágenes y videos están optimizados para cargar rápidamente en diferentes dispositivos</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td>Al hacer clic en una imagen, esta se expande para una visualización detallada</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Resultado final:</strong></td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Historia 5: Registro de usuarios</td>
+                            <td>La opción de registro con Google está disponible en la página</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td>El proceso de registro es rápido y no requiere más de 3 clics</td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Resultado final:</strong></td>
+                            <td class="checkbox-cell">[X]</td>
+                            <td class="checkbox-cell">[ ]</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

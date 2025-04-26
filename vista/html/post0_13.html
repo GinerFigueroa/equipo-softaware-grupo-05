@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimar Tareas - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .estimation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .estimation-table th, .estimation-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .estimation-table th {
+            background-color: #f2f2f2;
+        }
+        .estimation-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .fibonacci-scale {
+            background-color: #e2f3f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .task-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../index.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/crear-entregables.jpg" alt="Estimar Tareas" class="header-image">
+            <h1>13. Crear Entregables</h1>
+        </header>
+        
+        <div class="index-container">
+            <div class="index-list">
+                <h2>Índice de Contenidos</h2>
+                <ul>
+                    <li class="index-item" data-target="entradas">ENTRADAS</li>
+                    <li class="index-item" data-target="equipo-scrum">Equipo Principal de Scrum</li>
+                    <li class="index-item" data-target="tareas">Sprint Backlog</li>
+                    <li class="index-item" data-target="herramientas">SCRUMBOARD</li>
+                    <li class="index-item" data-target="impedimentos">IMPEDIMENT LOG</li>
+                    <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+                    <li class="index-item" data-target="experiencia">Experiencia de Equipo</li>
+                    <li class="index-item" data-target="salidas">SALIDAS</li>
+                    
+                </ul>
+            </div>
+            
+            <div class="content-area">
+                <div id="entradas" class="content-section">
+                    <h2>ENTRADAS</h2>
+                    <p>El Sprint Backlog es una lista de elementos seleccionados del Product Backlog que el equipo se compromete a completar en el ciclo de trabajo actual. Este backlog actúa como una hoja de ruta para el sprint, proporcionando claridad sobre los objetivos del equipo y asegurando un enfoque constante en la entrega de valor al cliente odontológico ZAZDENT.</p>
+                
+                    <div class="section-claseImagen">
+                        <img src="../img/importancia-estimacion-tareasa.jpg" alt="Importancia de estimar tareas" class="header-image">
+                        <p class="image-caption"></p>
+                    </div>
+                </div>
+
+                <div id="equipo-scrum" class="content-section">
+                    <h2>Equipo principal de Scrum</h2>
+                    <p><strong>Scrum Master:</strong> Sánchez Andrés</p>
+                    <p><strong>Product Owner:</strong> Bonifacio Dharma</p>
+                    <p><strong>Equipo de desarrollo:</strong></p>
+                    <ul>
+                        <li>Cañazaca Vasquez, Emily Lorena (Frontend)</li>
+                        <li>Gutiérrez Gutierrez, Danahe Arleni (Backend)</li>
+                        <li>Figueroa Gonzalez, Giner Bush (Diseño UI/UX)</li>
+                        <li>Escobar Mejia, Alejandro Maycoll (Full Stack)</li>
+                    </ul>
+                </div>
+
+                <div id="tareas" class="content-section">
+                    <h2>Sprint Backlog</h2>
+                    
+                    <table class="estimation-table">
+                        <tr>
+                            <th>Historia</th>
+                            <th>Tarea</th>
+                            <th>Esfuerzo</th>
+                            <th>Responsable</th>
+                            <th>Prioridad</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Historia 1: Agendar una cita</td>
+                            <td>Tarea 1.1: Crear el Design system</td>
+                            <td>8</td>
+                            <td>Giner - Danahe - Alejandro</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 1.2: Implementar Design system</td>
+                            <td>5</td>
+                            <td>Giner - Emily - Alejandro</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 1.3: Optimizar imágenes</td>
+                            <td>3</td>
+                            <td>Emily</td>
+                            <td>Media</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Historia 2: Navegación</td>
+                            <td>Tarea 2.1: Diseñar barra navegación</td>
+                            <td>5</td>
+                            <td>Giner</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 2.2: Implementar desktop</td>
+                            <td>3</td>
+                            <td>Emily</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 2.3: Adaptar móvil</td>
+                            <td>3</td>
+                            <td>Emily</td>
+                            <td>Media</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Historia 3: Ubicación</td>
+                            <td>Tarea 3.1: Diseñar sección ubicación</td>
+                            <td>4</td>
+                            <td>Giner</td>
+                            <td>Media</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 3.2: Implementar ubicación</td>
+                            <td>3</td>
+                            <td>Alejandro</td>
+                            <td>Media</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Historia 4: Registro</td>
+                            <td>Tarea 4.1: Configurar base de datos</td>
+                            <td>5</td>
+                            <td>Danahe</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Tarea 4.2: Autenticación Google</td>
+                            <td>3</td>
+                            <td>Danahe</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><strong>Total estimado</strong></td>
+                            <td><strong>42</strong></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="herramientas" class="content-section">
+                    <h2>HERRAMIENTAS</h2>
+                    
+                    <div class="fibonacci-scale">
+                        <h3>Criterios de estimación</h3>
+                        <p>Utilizaremos la técnica Planning Poker para estimar el esfuerzo en cada tarea. La escala de valores será de Fibonacci modificada:</p>
+                        <ul>
+                            <li><strong>1 punto:</strong> Tarea muy pequeña (1-2 horas)</li>
+                            <li><strong>2 puntos:</strong> Tarea pequeña (medio día)</li>
+                            <li><strong>3 puntos:</strong> Tarea moderada (1 día)</li>
+                            <li><strong>5 puntos:</strong> Tarea considerable (2-3 días)</li>
+                            <li><strong>8 puntos:</strong> Tarea grande (1 semana)</li>
+                            <li><strong>13 puntos:</strong> Tarea muy grande (requiere división)</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>SCRUMBOARD</h3>
+                    <div class="section-claseImagen">
+                        <img src="../img/scrum-board.jpg" alt="Tablero Scrum" class="header-image">
+                        <p class="image-caption">Estado actual del tablero de trabajo</p>
+                    </div>
+                </div>
+
+                <div id="impedimentos" class="content-section">
+                    <h2>IMPEDIMENT LOG</h2>
+                    <div class="task-card">
+                        <ul>
+                            <li>Conflictos de horarios entre miembros del equipo</li>
+                            <li>Dificultades técnicas con la integración de Google OAuth</li>
+                            <li>Retrasos en la aprobación de diseños por parte del cliente</li>
+                            <li>Problemas de conectividad en reuniones remotas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="experiencia" class="content-section">
+                    <h2>Experiencia de Equipo</h2>
+                    <p>El equipo ha demostrado una excelente sinergia desde el inicio del proyecto. Emily y Alejandro han trabajado estrechamente en la implementación frontend, mientras Danahe ha establecido una sólida base backend. Giner ha logrado crear diseños que cumplen con los requerimientos del cliente odontológico. Sánchez Andrés como Scrum Master ha facilitado la comunicación y Bonifacio Dharma como Product Owner ha mantenido una visión clara del producto.</p>
+                </div>
+
+                <div id="salidas" class="content-section">
+                    <h2>SALIDAS</h2>
+                    
+                    <div id="entregables" class="task-card">
+                        <h3>Entregables del Sprint</h3>
+                        <ul>
+                            <li>Design system completo implementado</li>
+                            <li>Sistema de navegación responsive funcional</li>
+                            <li>Sección de ubicación con mapa interactivo</li>
+                            <li>Módulo de autenticación con Google OAuth</li>
+                            <li>Base de datos inicial configurada</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="scrumboard-actualizado" class="content-section">
+                        <h3>SCRUMBOARD ACTUALIZADO</h3>
+                        <div class="section-claseImagen">
+                            <img src="../img/scrum-board-updated.jpg" alt="Tablero Scrum Actualizado" class="header-image">
+                            <p class="image-caption">Estado final del sprint con todas las tareas completadas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
