@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15. Refinamiento del Backlog Priorizado - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .estimation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .estimation-table th, .estimation-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .estimation-table th {
+            background-color: #f2f2f2;
+        }
+        .estimation-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .priority-box {
+            background-color: #e2f3f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .epic-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+        .priority-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            color: white;
+        }
+        .must-have { background-color: #e74c3c; }
+        .should-have { background-color: #f39c12; }
+        .could-have { background-color: #3498db; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../posts/post02.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/Realizar-Daily-Standup.jpg" alt="Refinamiento del Backlog" class="header-image">
+            <h1>15. Refinamiento del Backlog Priorizado</h1>
+        </header>
+        
+        
+       <div class="index-container">
+    <div class="index-list">
+        <h2>Índice de Contenidos</h2>
+        <ul>
+            <li class="index-item selected" data-target="entradas">ENTRADAS</li>
+            <li class="index-item" data-target="equipo-scrum">Equipo Principal de Scrum</li>
+            <li class="index-item" data-target="backlog">Backlog Priorizado</li>
+            <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+            <li class="index-item" data-target="salidas">SALIDAS</li>
+        </ul>
+    </div>
+    
+    <div class="content-area">
+        <!-- ENTRADAS -->
+        <div id="entradas" class="content-section active">
+            <h2>ENTRADAS</h2>
+            <div class="process-description">
+                <p>El proceso de refinamiento del backlog para ZAZDENT incluye:</p>
+                <ul>
+                    <li><strong>Priorización estratégica:</strong> Alineación con objetivos de negocio</li>
+                    <li><strong>Descomposición técnica:</strong> Dividir épicas en historias implementables</li>
+                    <li><strong>Validación continua:</strong> Revisión semanal con stakeholders</li>
+                </ul>
+            </div>
+            
+            <div class="section-claseImagen">
+                <img src="../img/blannckkoop.png" alt="Refinamiento Backlog ZAZDENT" class="header-image">
+                <p class="image-caption">Sesión de refinamiento con el equipo </p>
+            </div>
+        </div>
+
+        <!-- EQUIPO SCRUM (VERSIÓN MANTENIDA) -->
+        <div id="equipo-scrum" class="content-section">
+            <h2>Equipo Principal de Scrum</h2>
+            
+            <div class="team-roles-container">
+                <div class="role-card">
+                    <div class="role-header">
+                        <h3>Scrum Master</h3>
+                        <span class="role-icon">🛠️</span>
+                    </div>
+                    <p class="member-name">Sánchez Andrés</p>
+                    <ul class="responsibilities">
+                        <li>Facilita eventos Scrum</li>
+                        <li>Elimina impedimentos</li>
+                        <li>Mantiene métricas del equipo</li>
+                    </ul>
+                </div>
+                
+                <div class="role-card">
+                    <div class="role-header">
+                        <h3>Product Owner</h3>
+                        <span class="role-icon">📊</span>
+                    </div>
+                    <p class="member-name">Bonifacio Dharma</p>
+                    <ul class="responsibilities">
+                        <li>Define la visión del producto</li>
+                        <li>Prioriza el backlog</li>
+                        <li>Valida criterios de aceptación</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="dev-team-section">
+                <h3>Equipo de Desarrollo</h3>
+                <div class="dev-team-grid">
+                    <div class="dev-card">
+                        <h4>Frontend</h4>
+                        <p class="dev-name">Cañazaca Vasquez, Emily Lorena</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Tailwind</span>
+                        </div>
+                    </div>
+                    
+                    <div class="dev-card">
+                        <h4>Backend</h4>
+                        <p class="dev-name">Gutiérrez Gutierrez, Danahe Arleni</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                    
+                    <div class="dev-card">
+                        <h4>UI/UX</h4>
+                        <p class="dev-name">Figueroa Gonzalez, Giner Bush</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">User Testing</span>
+                        </div>
+                    </div>
+                    
+                    <div class="dev-card">
+                        <h4>Full Stack</h4>
+                        <p class="dev-name">Escobar Mejia, Alejandro Maycoll</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">DevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BACKLOG PRIORIZADO -->
+        <div id="backlog" class="content-section">
+            <h2>Backlog Priorizado Actual</h2>
+            
+            <div class="priority-legend">
+                <span class="legend-item must-have">Must Have</span>
+                <span class="legend-item should-have">Should Have</span>
+                <span class="legend-item could-have">Could Have</span>
+            </div>
+            
+            <div class="epic-container">
+                <div class="epic-card">
+                    <h3>Épica 1: Experiencia Inicial del Paciente</h3>
+                    <table class="backlog-table">
+                        <thead>
+                            <tr>
+                                <th width="10%">ID</th>
+                                <th width="40%">Historia de Usuario</th>
+                                <th width="15%">Prioridad</th>
+                                <th width="35%">Criterios de Aceptación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>US-101</td>
+                                <td>Como paciente nuevo, quiero una página de bienvenida clara para entender los servicios dentales</td>
+                                <td><span class="priority-badge must-have">Must Have</span></td>
+                                <td>
+                                    <ul class="acceptance-list">
+                                        <li>Mostrar especialidades disponibles</li>
+                                        <li>Incluir botón de "Primera Consulta"</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>US-102</td>
+                                <td>Como paciente, quiero navegar fácilmente entre las secciones del sitio</td>
+                                <td><span class="priority-badge must-have">Must Have</span></td>
+                                <td>
+                                    <ul class="acceptance-list">
+                                        <li>Menú responsive funcionando</li>
+                                        <li>Tiempo de carga <2s</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="epic-card">
+                    <h3>Épica 2: Gestión de Citas Dentales</h3>
+                    <table class="backlog-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Historia de Usuario</th>
+                                <th>Prioridad</th>
+                                <th>Criterios de Aceptación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>US-201</td>
+                                <td>Como paciente, quiero agendar citas online para elegir especialista y horario</td>
+                                <td><span class="priority-badge must-have">Must Have</span></td>
+                                <td>
+                                    <ul class="acceptance-list">
+                                        <li>Integración con calendario médico</li>
+                                        <li>Confirmación por SMS/email</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>US-202</td>
+                                <td>Como recepcionista, quiero gestionar múltiples agendas dentales</td>
+                                <td><span class="priority-badge should-have">Should Have</span></td>
+                                <td>
+                                    <ul class="acceptance-list">
+                                        <li>Vista consolidada por especialista</li>
+                                        <li>Filtros por tipo de procedimiento</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERRAMIENTAS -->
+        <div id="herramientas" class="content-section">
+            <h2>HERRAMIENTAS</h2>
+            
+            <div class="tools-section">
+                <div class="tool-card">
+                    <img src="../img/jiras.jpg" alt="Jira" class="header-image">
+                    <h3>Jira Software</h3>
+                    <p>Gestión del backlog y seguimiento de sprints</p>
+                    <div class="tool-stats">
+                        <span>Última actualización: Hoy 09:30</span>
+                    </div>
+                </div>
+                
+                <div class="tool-card">
+                    <img src="../img/figma.jpg" alt="Figma" class="header-image">
+                    <h3>Figma</h3>
+                    <p>Prototipado de interfaces dentales</p>
+                    <div class="tool-stats">
+                        <span>Versión actual: 2.4</span>
+                    </div>
+                </div>
+                
+                <div class="tool-card">
+                    <img src="../img/equipoComunicacion.jpg" alt="Slack" class="header-image">
+                    <h3>Slack</h3>
+                    <p>Comunicación diaria del equipo</p>
+                    <div class="tool-stats">
+                        <span>Canal: #zazdent-dev</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-section">
+                <h3>Reunión de Refinamiento</h3>
+                <div class="process-steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <p>Revisión de historias con el PO</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p>Definición de criterios de aceptación</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p>Estimación con Planning Poker</p>
+                    </div>
+                </div>
+                
+                <div class="section-claseImagen">
+                    <img src="../img/refinement-meeting-dental.jpg" alt="Reunión de refinamiento" class="process-image">
+                    <p class="image-caption">Equipo ZAZDENT durante la sesión de refinamiento</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SALIDAS -->
+        <div id="salidas" class="content-section">
+            <h2>SALIDAS</h2>
+            
+            <div class="output-container">
+                <div class="output-card">
+                    <h3>Plan de Sprints</h3>
+                    <table class="sprint-plan">
+                        <thead>
+                            <tr>
+                                <th>Sprint</th>
+                                <th>Fechas</th>
+                                <th>Objetivo</th>
+                                <th>Historias</th>
+                                <th>Puntos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sprint 1</td>
+                                <td>20/05 - 03/06</td>
+                                <td>Experiencia inicial del paciente</td>
+                                <td>US-101, US-102</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>Sprint 2</td>
+                                <td>04/06 - 17/06</td>
+                                <td>Sistema básico de citas</td>
+                                <td>US-201</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td>Sprint 3</td>
+                                <td>18/06 - 01/07</td>
+                                <td>Panel de gestión</td>
+                                <td>US-202</td>
+                                <td>8</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="output-card">
+                    <h3>Backlog Actualizado</h3>
+                    <table class="updated-backlog">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Historia</th>
+                                <th>Prioridad</th>
+                                <th>Sprint</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>US-101</td>
+                                <td>Página de bienvenida</td>
+                                <td><span class="priority-badge must-have">Must Have</span></td>
+                                <td>Sprint 1</td>
+                                <td><span class="status-todo">Por hacer</span></td>
+                            </tr>
+                            <tr>
+                                <td>US-102</td>
+                                <td>Navegación principal</td>
+                                <td><span class="priority-badge must-have">Must Have</span></td>
+                                <td>Sprint 1</td>
+                                <td><span class="status-todo">Por hacer</span></td>
+                            </tr>
+                            <tr>
+                                <td>US-201</td>
+                                <td>Agendamiento online</td>
+                                <td><span class="priority-badge must-have">Must Have</span></td>
+                                <td>Sprint 2</td>
+                                <td><span class="status-backlog">Backlog</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="next-steps">
+                <h3>Próximos Pasos</h3>
+                <ol>
+                    <li><strong>Preparación Sprint 1:</strong> Reunión de planning el 19/05</li>
+                    <li><strong>Validación diseño:</strong> Sesión con odontólogos el 22/05</li>
+                    <li><strong>Entorno de prueba:</strong> Configuración para demo inicial</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

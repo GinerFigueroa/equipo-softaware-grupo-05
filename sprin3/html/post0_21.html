@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21. Pruebas - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Estilos para el encabezado */
+        .header-with-image {
+            position: relative;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .header-buttons {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        
+        .home-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 15px;
+            background-color: #2c7be5;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .home-button:hover {
+            background-color: #1a68d1;
+        }
+        
+        .home-button svg {
+            margin-right: 8px;
+        }
+        
+        /* Estilos para el índice */
+        .index-container {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .index-list {
+            flex: 0 0 280px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 20px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .index-list h2 {
+            font-size: 1.5rem;
+            color: #2c7be5;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        
+        .index-list ol, .index-list ul {
+            padding-left: 20px;
+        }
+        
+        .index-list li {
+            margin-bottom: 10px;
+        }
+        
+        .index-list a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .index-list a:hover {
+            color: #2c7be5;
+        }
+        
+        /* Estilos para el contenido */
+        .content-area {
+            flex: 1;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #2c7be5;
+            margin-top: 0;
+            font-size: 1.3rem;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #444;
+            font-size: 1.1rem;
+        }
+        
+        /* Estilos para tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #e1e4e8;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #444;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Estilos para casos de prueba */
+        .test-case {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2c7be5;
+        }
+        
+        .test-case h3 {
+            margin-top: 0;
+            color: #2c7be5;
+        }
+        
+        .test-section {
+            margin-bottom: 15px;
+        }
+        
+        .test-section h4 {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .index-container {
+                flex-direction: column;
+            }
+            
+            .index-list {
+                position: static;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../posts/post02.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/crear-entregables.jpg" alt="Pruebas ZAZDENT" class="header-image">
+            <h1>21. Pruebas - Sistema de Gestión Odontológica</h1>
+        </header>
+        
+        <div class="index-container">
+            <div class="index-list">
+                <h2>Índice - ZAZDENT</h2>
+                <ol>
+                    <li><a href="#equipo-xp">Equipo XP</a></li>
+                    <li><a href="#roles-xp">Roles en XP</a></li>
+                    <li><a href="#planificacion">Planificación</a></li>
+                    <li><a href="#historias">Historias de Usuario</a></li>
+                    <li><a href="#pruebas-unitarias">Pruebas Unitarias</a></li>
+                    <li><a href="#pruebas-aceptacion">Pruebas de Aceptación</a></li>
+                    <li><a href="#pruebas-funcionales">Pruebas Funcionales</a>
+                        <ul>
+                            <li><a href="#caso1">Caso NR1: HU01</a></li>
+                            <li><a href="#caso2">Caso NR2: HU02</a></li>
+                            <li><a href="#caso3">Caso NR3: HU03</a></li>
+                            <li><a href="#caso4">Caso NR4: HU04</a></li>
+                            <li><a href="#caso5">Caso NR5: HU05</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="content-area">
+                <!-- Equipo XP -->
+                <section id="equipo-xp">
+                    <h2>Equipo XP</h2>
+                    <table>
+                        <tr>
+                            <th>Rol</th>
+                            <th>Nombre</th>
+                            <th>Responsabilidades</th>
+                        </tr>
+                        <tr>
+                            <td>Coach</td>
+                            <td>Dharma Bonifacio</td>
+                            <td>Facilitar prácticas XP, mentoría continua</td>
+                        </tr>
+                        <tr>
+                            <td>Cliente</td>
+                            <td>Andres Tucta</td>
+                            <td>Definir criterios de aceptación</td>
+                        </tr>
+                        <tr>
+                            <td>Programadores</td>
+                            <td>Cañazaca, Gutiérrez, Figueroa, Escobar</td>
+                            <td>Implementación de funcionalidades</td>
+                        </tr>
+                        <tr>
+                            <td>Encargado de pruebas</td>
+                            <td>Danahe Gutierrez</td>
+                            <td>Aseguramiento de calidad</td>
+                        </tr>
+                        <tr>
+                            <td>Tracker</td>
+                            <td>Dharma Bonifacio</td>
+                            <td>Seguimiento de métricas</td>
+                        </tr>
+                        <tr>
+                            <td>Consultor</td>
+                            <td>Ing. Arque Pantigozo</td>
+                            <td>Asesoría técnica</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Roles en XP -->
+                <section id="roles-xp">
+                    <h2>Roles en XP</h2>
+                    <table>
+                        <tr>
+                            <th>Rol</th>
+                            <th>Responsable</th>
+                            <th>Responsabilidades clave</th>
+                        </tr>
+                        <tr>
+                            <td>Scrum Master</td>
+                            <td>Dharma Bonifacio</td>
+                            <td>Facilitar eventos, eliminar impedimentos</td>
+                        </tr>
+                        <tr>
+                            <td>Product Owner</td>
+                            <td>Andres Shanches</td>
+                            <td>Priorizar backlog, definir criterios</td>
+                        </tr>
+                        <tr>
+                            <td>Equipo Desarrollo</td>
+                            <td>Cañazaca, Gutiérrez, Figueroa, Escobar</td>
+                            <td>Implementación de funcionalidades</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Planificación -->
+                <section id="planificacion">
+                    <h2>Planificación del Lanzamiento</h2>
+                    <table>
+                        <tr>
+                            <th>Hito</th>
+                            <th>Fecha</th>
+                            <th>Objetivo</th>
+                        </tr>
+                        <tr>
+                            <td>Release 1 (MVP)</td>
+                            <td>15/06/2025</td>
+                            <td>Funcionalidades básicas de gestión</td>
+                        </tr>
+                        <tr>
+                            <td>Release 2</td>
+                            <td>30/06/2025</td>
+                            <td>Funcionalidades avanzadas e integraciones</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Historias de Usuario -->
+                <section id="historias">
+                    <h2>Historias de Usuario</h2>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Descripción</th>
+                            <th>Story Points</th>
+                            <th>Prioridad</th>
+                        </tr>
+                        <tr>
+                            <td>HU01</td>
+                            <td>Gestión de reservas de citas</td>
+                            <td>5</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>HU02</td>
+                            <td>Filtros y paginación</td>
+                            <td>3</td>
+                            <td>Media</td>
+                        </tr>
+                        <tr>
+                            <td>HU03</td>
+                            <td>Gestión de servicios</td>
+                            <td>8</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>HU04</td>
+                            <td>Historiales clínicos</td>
+                            <td>13</td>
+                            <td>Crítica</td>
+                        </tr>
+                        <tr>
+                            <td>HU05</td>
+                            <td>Agendamiento de citas</td>
+                            <td>5</td>
+                            <td>Alta</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Pruebas Unitarias -->
+                <section id="pruebas-unitarias">
+                    <h2>Pruebas Unitarias</h2>
+                    <table>
+                        <tr>
+                            <th>Módulo</th>
+                            <th>Cobertura</th>
+                            <th>Estado</th>
+                        </tr>
+                        <tr>
+                            <td>Autenticación</td>
+                            <td>95%</td>
+                            <td>Completado</td>
+                        </tr>
+                        <tr>
+                            <td>Gestión de citas</td>
+                            <td>92%</td>
+                            <td>Completado</td>
+                        </tr>
+                        <tr>
+                            <td>Historial clínico</td>
+                            <td>85%</td>
+                            <td>En progreso</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Pruebas de Aceptación -->
+                <section id="pruebas-aceptacion">
+                    <h2>Pruebas de Aceptación</h2>
+                    <table>
+                        <tr>
+                            <th>Historia</th>
+                            <th>Criterios</th>
+                            <th>Estado</th>
+                        </tr>
+                        <tr>
+                            <td>HU01</td>
+                            <td>Filtros por estado funcionales</td>
+                            <td>Aprobado</td>
+                        </tr>
+                        <tr>
+                            <td>HU04</td>
+                            <td>Visualización de tratamientos</td>
+                            <td>Pendiente</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Pruebas Funcionales -->
+                <section id="pruebas-funcionales">
+                    <h2>Pruebas Funcionales</h2>
+                    
+                    <!-- Caso NR1 -->
+                    <div id="caso1" class="test-case">
+                        <h3>Caso de Prueba NR1: Historia de Usuario HU01</h3>
+                        <div class="test-section">
+                            <h4>Descripción</h4>
+                            <p>Como recepcionista, quiero filtrar citas por estado (confirmada/completada) para gestionar eficientemente el flujo de pacientes.</p>
+                        </div>
+                        <div class="test-section">
+                            <h4>Condiciones</h4>
+                            <p>Sistema con datos de prueba de citas en diferentes estados</p>
+                        </div>
+                        <div class="test-section">
+                            <h4>Resultado esperado</h4>
+                            <p>Filtros funcionando correctamente y mostrando solo las citas en el estado seleccionado</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Caso NR4 (de la imagen) -->
+                    <div id="caso4" class="test-case">
+                        <h3>CASO DE PRUEBA NR4: Historia de usuario N° HU04</h3>
+                        <div class="test-section">
+                            <h4>Historia de usuario</h4>
+                            <p>Como dueña del negocio, quiero que el menú de precios en la landing page muestre automáticamente los servicios y extras desde la base de datos, adaptándose a los cambios, para garantizar información siempre actualizada</p>
+                        </div>
+                        <div class="test-section">
+                            <h4>Descripción</h4>
+                            <p>Implementar un menú de precios dinámico que cargue automáticamente los servicios y extras desde la base de datos, adaptándose a los cambios y asegurando un diseño responsivo en la landing page.</p>
+                        </div>
+                        <div class="test-section">
+                            <h4>Condiciones de ejecución</h4>
+                            <ul>
+                                <li>Funcionalidad disponible en el Sprint 3</li>
+                                <li>Sistema debe reflejar automáticamente los cambios de la base de datos</li>
+                                <li>Diseño responsivo que se ajuste dinámicamente</li>
+                            </ul>
+                        </div>
+                        <div class="test-section">
+                            <h4>Pasos de ejecución</h4>
+                            <ol>
+                                <li>Iniciar sesión como dueña o administrador con permisos</li>
+                                <li>Navegar a la sección de "Servicios" o "Servicios y Adicionales"</li>
+                                <li>Verificar que los servicios existentes se muestren correctamente</li>
+                                <li>Agregar un nuevo servicio adicional (ej. "Transporte de equipaje")</li>
+                                <li>Editar un servicio existente (cambiar precio)</li>
+                                <li>Eliminar un servicio adicional</li>
+                                <li>Generar automáticamente el menú de precios en la landing page</li>
+                                <li>Ajustar diseño del menú para que sea responsivo</li>
+                            </ol>
+                        </div>
+                        <div class="test-section">
+                            <h4>Resultado esperado</h4>
+                            <ul>
+                                <li>Menú de precios muestra automáticamente servicios y extras desde BD</li>
+                                <li>Diseño se adapta dinámicamente a la cantidad de servicios</li>
+                                <li>Presentación clara, ordenada y responsiva en cualquier dispositivo</li>
+                                <li>Cambios no afectan el rendimiento del sitio</li>
+                            </ul>
+                        </div>
+                        <div class="test-section">
+                            <h4>Evaluación</h4>
+                            <p>La prueba se concluyó satisfactoriamente. La dueña verificó que los servicios y extras se muestran correctamente en la landing page, coincidiendo con los datos en la base de datos. Los cambios se reflejaron correctamente en la página pública en tiempo real sin problemas de rendimiento.</p>
+                        </div>
+                    </div>
+                    
+                  <!-- Caso NR2: HU02 -->
+<div id="caso2" class="test-case">
+    <h3>CASO DE PRUEBA NR2: Historia de usuario N° HU02</h3>
+    <div class="test-section">
+        <h4>Historia de usuario</h4>
+        <p>Como odontólogo, quiero filtrar y paginar el historial de tratamientos de un paciente para encontrar información relevante rápidamente.</p>
+    </div>
+    <div class="test-section">
+        <h4>Descripción</h4>
+        <p>Implementar sistema de filtrado avanzado y paginación en el módulo de historiales clínicos con capacidad de búsqueda por palabras clave.</p>
+    </div>
+    <div class="test-section">
+        <h4>Condiciones de ejecución</h4>
+        <ul>
+            <li>Disponible en Sprint 2</li>
+            <li>Debe manejar mínimo 500 registros por paciente sin degradación de performance</li>
+            <li>Integración con módulo de exportación a PDF</li>
+        </ul>
+    </div>
+    <div class="test-section">
+        <h4>Pasos de ejecución</h4>
+        <ol>
+            <li>Acceder al historial clínico de un paciente con +100 tratamientos</li>
+            <li>Aplicar filtro por tipo de tratamiento (ej: "Ortodoncia")</li>
+            <li>Verificar que solo muestre tratamientos del tipo seleccionado</li>
+            <li>Aplicar filtro por rango de fechas (ej: últimos 6 meses)</li>
+            <li>Buscar palabra clave en notas clínicas (ej: "amalgama")</li>
+            <li>Navegar entre páginas usando la paginación</li>
+            <li>Exportar resultados filtrados a PDF</li>
+            <li>Verificar diseño responsivo en móviles</li>
+        </ol>
+    </div>
+    <div class="test-section">
+        <h4>Resultado esperado</h4>
+        <ul>
+            <li>Sistema muestra únicamente registros que cumplen con todos los filtros aplicados</li>
+            <li>Paginación divide resultados en grupos de 10 registros con controles intuitivos</li>
+            <li>PDF generado contiene exactamente los mismos registros visibles en pantalla</li>
+            <li>Tiempo de respuesta < 2 segundos incluso con múltiples filtros</li>
+            <li>Interfaz adaptada correctamente en dispositivos móviles</li>
+        </ul>
+    </div>
+    <div class="test-section">
+        <h4>Evaluación</h4>
+        <p>Prueba exitosa. El odontólogo verificó que puede encontrar tratamientos específicos en segundos, incluso en historiales complejos. La exportación a PDF mantiene el formato profesional requerido para documentación médica.</p>
+    </div>
+</div>
+
+<!-- Caso NR3: HU03 -->
+<div id="caso3" class="test-case">
+    <h3>CASO DE PRUEBA NR3: Historia de usuario N° HU03</h3>
+    <div class="test-section">
+        <h4>Historia de usuario</h4>
+        <p>Como administrador, quiero gestionar los servicios ofrecidos (limpieza, ortodoncia, etc.) para mantener actualizada la oferta del consultorio.</p>
+    </div>
+    <div class="test-section">
+        <h4>Descripción</h4>
+        <p>Implementar CRUD completo de servicios odontológicos con categorización, duración estimada e integración con facturación.</p>
+    </div>
+    <div class="test-section">
+        <h4>Condiciones de ejecución</h4>
+        <ul>
+            <li>Debe incluir validación de precios y duraciones</li>
+            <li>Cambios deben reflejarse inmediatamente en agendamiento</li>
+            <li>Registro histórico de modificaciones para auditoría</li>
+        </ul>
+    </div>
+    <div class="test-section">
+        <h4>Pasos de ejecución</h4>
+        <ol>
+            <li>Crear nuevo servicio ("Blanqueamiento dental") con precio $150 y duración 60min</li>
+            <li>Asignar categoría "Estética dental"</li>
+            <li>Verificar que aparece disponible para agendar</li>
+            <li>Editar servicio existente (cambiar precio de "Limpieza" de $80 a $95)</li>
+            <li>Intentar eliminar servicio con citas futuras programadas</li>
+            <li>Exportar listado completo a Excel</li>
+            <li>Verificar que cambios se reflejen en módulo de facturación</li>
+        </ol>
+    </div>
+    <div class="test-section">
+        <h4>Resultado esperado</h4>
+        <ul>
+            <li>Nuevos servicios disponibles para agendamiento inmediato</li>
+            <li>Actualizaciones de precios aplicadas a nuevas citas</li>
+            <li>Prevención de eliminación de servicios con citas pendientes</li>
+            <li>Excel generado contiene todos los campos relevantes</li>
+            <li>Integración perfecta con módulos de agendamiento y facturación</li>
+        </ul>
+    </div>
+    <div class="test-section">
+        <h4>Evaluación</h4>
+        <p>Validación exitosa. El administrador confirmó que puede mantener actualizado el cuadro de servicios, incluyendo precios especiales para temporadas promocionales. El sistema previno eliminaciones accidentales de servicios críticos.</p>
+    </div>
+</div>
+
+<!-- Caso NR5: HU05 -->
+<div id="caso5" class="test-case">
+    <h3>CASO DE PRUEBA NR5: Historia de usuario N° HU05</h3>
+    <div class="test-section">
+        <h4>Historia de usuario</h4>
+        <p>Como paciente, quiero agendar citas en línea para ahorrar tiempo y coordinar mejor mi tratamiento.</p>
+    </div>
+    <div class="test-section">
+        <h4>Descripción</h4>
+        <p>Implementar sistema de autogestión de citas con selección de profesional, servicio y horarios disponibles.</p>
+    </div>
+    <div class="test-section">
+        <h4>Condiciones de ejecución</h4>
+        <ul>
+            <li>Disponible 24/7 con confirmación automática</li>
+            <li>Debe integrarse con historial clínico existente</li>
+            <li>Soporte para recordatorios automáticos vía SMS/email</li>
+        </ul>
+    </div>
+    <div class="test-section">
+        <h4>Pasos de ejecución</h4>
+        <ol>
+            <li>Acceder al portal de pacientes sin autenticación</li>
+            <li>Seleccionar tipo de consulta ("Ortodoncia - Ajuste de brackets")</li>
+            <li>Elegir odontólogo especializado</li>
+            <li>Ver horarios disponibles (solo mostrar franjas de 30min válidas)</li>
+            <li>Completar datos de contacto</li>
+            <li>Recibir confirmación inmediata por email</li>
+            <li>Intentar reagendar cita con menos de 24h de anticipación</li>
+            <li>Verificar recordatorio automático 24h antes</li>
+        </ol>
+    </div>
+    <div class="test-section">
+        <h4>Resultado esperado</h4>
+        <ul>
+            <li>Interfaz intuitiva que guíe al paciente en 3 pasos claros</li>
+            <li>Horarios actualizados en tiempo real según disponibilidad real</li>
+            <li>Confirmación inmediata con código QR para check-in</li>
+            <li>Prevención de cambios de última hora</li>
+            <li>Recordatorios automáticos con enlace para cancelación</li>
+            <li>Integración con historial clínico al llegar a consulta</li>
+        </ul>
+    </div>
+    <div class="test-section">
+        <h4>Evaluación</h4>
+        <p>Prueba satisfactoria. Pacientes testeadores reportaron que el proceso es más rápido que por teléfono. La integración con el sistema de recordatorios redujo las inasistencias en un 40% durante el periodo de prueba.</p>
+    </div>
+</div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Add highlight effect
+                    targetElement.style.backgroundColor = '#e6f0ff';
+                    setTimeout(() => {
+                        targetElement.style.backgroundColor = '';
+                    }, 1500);
+                }
+            });
+        });
+        
+        // Highlight current section in index
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section, .test-case');
+            const indexLinks = document.querySelectorAll('.index-list a');
+            
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    currentSection = '#' + section.getAttribute('id');
+                }
+            });
+            
+            indexLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

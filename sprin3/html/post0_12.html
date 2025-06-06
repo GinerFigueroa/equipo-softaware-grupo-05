@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimar Tareas - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .estimation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .estimation-table th, .estimation-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .estimation-table th {
+            background-color: #f2f2f2;
+        }
+        .estimation-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .fibonacci-scale {
+            background-color: #e2f3f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .task-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../posts/post02.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/estimar-tareas.jpg" alt="Estimar Tareas" class="header-image">
+            <h1>12. Crear el Sprint Backlog</h1>
+        </header>
+        
+        <div class="index-container">
+    <div class="index-list">
+        <h2>Índice de Contenidos</h2>
+        <ul>
+            <li class="index-item" data-target="entradas">ENTRADAS</li>
+            <li class="index-item" data-target="equipo-scrum">Equipo Principal de Scrum</li>
+            <li class="index-item" data-target="tareas">Effort Estimated Task List</li>
+            <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+            <li class="index-item" data-target="salidas">SALIDAS</li>
+        </ul>
+    </div>
+    
+    <div class="content-area">
+        <!-- ENTRADAS -->
+        <div id="entradas" class="content-section">
+            <h2>ENTRADAS</h2>
+            <p>El Sprint Backlog es una lista de elementos seleccionados del Product Backlog que el equipo se compromete a completar en el ciclo de trabajo actual para el sistema de gestión de citas odontológicas ZAZDENT. Este backlog actúa como una hoja de ruta para el sprint, proporcionando claridad sobre los objetivos del equipo y asegurando un enfoque constante en la entrega de valor tanto a la clínica como a los pacientes.</p>
+            
+            <div class="section-claseImagen">
+                <img src="../img/importancia-estimacion-tareas.jpg" alt="Planificación colaborativa" class="header-image">
+                <p class="image-caption">Equipo ZAZDENT durante la planificación del sprint</p>
+            </div>
+        </div>
+
+        <!-- EQUIPO (MANTENIENDO TU VERSIÓN) -->
+        <div id="equipo-scrum" class="content-section">
+            <h2>Equipo principal de Scrum</h2>
+            <p><strong>Scrum Master:</strong> Sánchez Andrés</p>
+            <p><strong>Product Owner:</strong> Bonifacio Dharma</p>
+            <p><strong>Equipo de desarrollo:</strong></p>
+            <ul>
+                <li>Cañazaca Vasquez, Emily Lorena (Frontend)</li>
+                <li>Gutiérrez Gutierrez, Danahe Arleni (Backend)</li>
+                <li>Figueroa Gonzalez, Giner Bush (Diseño UI/UX)</li>
+                <li>Escobar Mejia, Alejandro Maycoll (Full Stack)</li>
+            </ul>
+        </div>
+
+        <!-- TAREAS (COMBINANDO AMBAS VERSIONES) -->
+        <div id="tareas" class="content-section">
+            <h2>Effort Estimated Task List</h2>
+            
+            <table class="task-estimation-table">
+                <thead>
+                    <tr>
+                        <th>Historia</th>
+                        <th>Tarea</th>
+                        <th>Esfuerzo (puntos)</th>
+                        <th>Responsable</th>
+                        <th>Detalles Técnicos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Historia 1 -->
+                    <tr>
+                        <td rowspan="4">Historia 1: Registro de usuarios</td>
+                        <td>1.1: Diseñar interfaz de registro</td>
+                        <td>5</td>
+                        <td>Giner Bush</td>
+                        <td>Incluir opciones email/Google, validación en tiempo real</td>
+                    </tr>
+                    <tr>
+                        <td>1.2: Configurar base de datos</td>
+                        <td>3</td>
+                        <td>Danahe Arleni</td>
+                        <td>Cifrado de contraseñas, estructura segura</td>
+                    </tr>
+                    <tr>
+                        <td>1.3: Implementar registro email</td>
+                        <td>5</td>
+                        <td>Emily Lorena</td>
+                        <td>Flujo completo con confirmación</td>
+                    </tr>
+                    <tr>
+                        <td>1.4: Autenticación Google (OAuth2)</td>
+                        <td>8</td>
+                        <td>Alejandro Maycoll</td>
+                        <td>Integración API Google, manejo de tokens</td>
+                    </tr>
+                    
+                    <!-- Historia 2 -->
+                    <tr>
+                        <td rowspan="2">Historia 2: Reserva por Instagram</td>
+                        <td>2.1: Diseñar sección de reserva</td>
+                        <td>3</td>
+                        <td>Giner Bush</td>
+                        <td>Botón CTA claro, diseño responsive</td>
+                    </tr>
+                    <tr>
+                        <td>2.2: Implementar enlace Instagram</td>
+                        <td>3</td>
+                        <td>Emily Lorena</td>
+                        <td>Validar apertura en app móvil</td>
+                    </tr>
+                    
+                    <!-- Historia 3 -->
+                    <tr>
+                        <td rowspan="2">Historia 3: Visor de citas</td>
+                        <td>3.1: Interfaz visor de citas</td>
+                        <td>8</td>
+                        <td>Giner Bush</td>
+                        <td>Vista calendario/lista, filtros por fecha</td>
+                    </tr>
+                    <tr>
+                        <td>3.2: Recordatorios</td>
+                        <td>8</td>
+                        <td>Danahe Arleni</td>
+                        <td>Notificaciones push/email programables</td>
+                    </tr>
+                    
+                    <!-- Historia 4 -->
+                    <tr>
+                        <td rowspan="3">Historia 4: Gestión avanzada</td>
+                        <td>4.1: Diseñar interfaz administrativa</td>
+                        <td>5</td>
+                        <td>Giner Bush</td>
+                        <td>Formularios CRUD con validación</td>
+                    </tr>
+                    <tr>
+                        <td>4.2: Implementar registro citas/empleados</td>
+                        <td>8</td>
+                        <td>Alejandro Maycoll</td>
+                        <td>Historial de cambios, permisos</td>
+                    </tr>
+                    <tr>
+                        <td>4.3: Asignación de citas</td>
+                        <td>8</td>
+                        <td>Danahe Arleni</td>
+                        <td>Lógica automática/manual</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>Total estimado</strong></td>
+                        <td><strong>60 puntos</strong></td>
+                        <td colspan="2">Capacidad del equipo: 20 puntos/sprint</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- HERRAMIENTAS (DEL EJEMPLO) -->
+        <div id="herramientas" class="content-section">
+            <h2>HERRAMIENTAS</h2>
+            
+            <div class="fibonacci-scale">
+                <h3>Criterios de estimación</h3>
+                <p>Utilizaremos la técnica Planning Poker con escala Fibonacci modificada:</p>
+                <ul>
+                    <li><strong>1 punto:</strong> Tarea muy pequeña (1-2 horas)</li>
+                    <li><strong>2 puntos:</strong> Tarea pequeña (medio día)</li>
+                    <li><strong>3 puntos:</strong> Tarea moderada (1 día)</li>
+                    <li><strong>5 puntos:</strong> Tarea considerable (2-3 días)</li>
+                    <li><strong>8 puntos:</strong> Tarea grande (1 semana)</li>
+                </ul>
+            </div>
+            
+            <div class="sprint-meeting">
+                <h3>Reunión del Sprint</h3>
+                <p>El equipo Scrum junto con el Product Owner priorizarán historias del backlog y las desglosarán en tareas técnicas ejecutables durante esta reunión clave.</p>
+                
+                <div class="section-claseImagen">
+                    <img src="../img/planning-poker-session.jpg" alt="Sesión de Planning Poker" class="header-image">
+                    <p class="image-caption">Sesión de estimación con Planning Poker</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SALIDAS (ADAPTANDO AMBAS VERSIONES) -->
+        <div id="salidas" class="content-section">
+            <h2>SALIDAS</h2>
+            
+            <div class="sprint-backlog">
+                <h3>Sprint Backlog</h3>
+                <table class="backlog-table">
+                    <thead>
+                        <tr>
+                            <th>Historia</th>
+                            <th>Tarea</th>
+                            <th>Esfuerzo</th>
+                            <th>Responsable</th>
+                            <th>Sprint</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Sprint 1 -->
+                        <tr class="sprint-1">
+                            <td rowspan="2">Historia 1</td>
+                            <td>1.1: Diseñar interfaz</td>
+                            <td>5</td>
+                            <td>Giner</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="sprint-1">
+                            <td>1.2: Configurar BD</td>
+                            <td>3</td>
+                            <td>Danahe</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <!-- Sprint 2 -->
+                        <tr class="sprint-2">
+                            <td rowspan="3">Historia 2</td>
+                            <td>2.1: Diseñar reserva</td>
+                            <td>3</td>
+                            <td>Giner</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="sprint-2">
+                            <td>2.2: Enlace Instagram</td>
+                            <td>3</td>
+                            <td>Emily</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="sprint-2">
+                            <td>4.1: Diseño admin</td>
+                            <td>5</td>
+                            <td>Giner</td>
+                            <td>2</td>
+                        </tr>
+                        
+                        <!-- Sprint 3 -->
+                        <tr class="sprint-3">
+                            <td rowspan="4">Historia 3-4</td>
+                            <td>3.1: Visor citas</td>
+                            <td>8</td>
+                            <td>Emely</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="sprint-3">
+                            <td>4.2: Registro citas</td>
+                            <td>8</td>
+                            <td>Alejandro</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="sprint-3">
+                            <td>4.3: Asignación</td>
+                            <td>8</td>
+                            <td>Danahe</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="sprint-3">
+                            <td>3.2: Recordatorios</td>
+                            <td>8</td>
+                            <td>Emely</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="sprint-planning">
+                <h3>Planificación Estratégica</h3>
+                <div class="sprint">
+                    <h4>Sprint 1 (Semana 1):</h4>
+                    <ul>
+                        <li><strong>Objetivo:</strong> Bases del sistema (8 puntos)</li>
+                        <li><strong>Tareas clave:</strong> Diseño UI + Estructura BD</li>
+                        <li><strong>Equipo:</strong> Giner (UI/UX) + Danahe (Backend)</li>
+                    </ul>
+                </div>
+                
+                <div class="sprint">
+                    <h4>Sprint 2 (Semana 2):</h4>
+                    <ul>
+                        <li><strong>Objetivo:</strong> Funcionalidades básicas (11 puntos)</li>
+                        <li><strong>Tareas clave:</strong> Reservas + Interfaz admin</li>
+                        <li><strong>Equipo:</strong> Giner + Emily (Frontend)</li>
+                    </ul>
+                </div>
+                
+                <div class="sprint">
+                    <h4>Sprint 3 (Semana 3-4):</h4>
+                    <ul>
+                        <li><strong>Objetivo:</strong> Sistema completo (24 puntos)</li>
+                        <li><strong>Tareas clave:</strong> Gestión avanzada + Recordatorios</li>
+                        <li><strong>Equipo:</strong> Todo el equipo (roles específicos)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

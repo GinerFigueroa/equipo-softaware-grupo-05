@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimar Tareas - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .estimation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .estimation-table th, .estimation-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .estimation-table th {
+            background-color: #f2f2f2;
+        }
+        .estimation-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .fibonacci-scale {
+            background-color: #e2f3f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .task-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../posts/post02.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/crear-entregables.jpg" alt="Estimar Tareas" class="header-image">
+            <h1>13. Crear Entregables</h1>
+        </header>
+        
+        <div class="index-container">
+    <div class="index-list">
+        <h2>Índice de Contenidos</h2>
+        <ul>
+            <li class="index-item" data-target="entradas">ENTRADAS</li>
+            <li class="index-item" data-target="equipo-scrum">Equipo Principal de Scrum</li>
+            <li class="index-item" data-target="tareas">Sprint Backlog</li>
+            <li class="index-item" data-target="scrumboard">SCRUMBOARD</li>
+            <li class="index-item" data-target="impedimentos">IMPEDIMENT LOG</li>
+            <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+            <li class="index-item" data-target="experiencia">Experiencia de Equipo</li>
+            <li class="index-item" data-target="salidas">SALIDAS</li>
+        </ul>
+    </div>
+    
+    <div class="content-area">
+        <!-- ENTRADAS -->
+        <div id="entradas" class="content-section">
+            <h2>ENTRADAS</h2>
+            <p>El Sprint Backlog para el sistema de gestión de citas odontológicas ZAZDENT contiene las historias priorizadas del Product Backlog que el equipo se compromete a completar en este ciclo. Sirve como guía para entregar valor constante a la clínica y pacientes.</p>
+            
+            <div class="section-claseImagen">
+                <img src="../img/planificacionnnnnnn.png" alt="Planificación para ZAZDENT" class="header-image">
+                <p class="image-caption">Equipo ZAZDENT durante la planificación del sprint</p>
+            </div>
+        </div>
+
+        <!-- EQUIPO (TU VERSIÓN MANTENIDA) -->
+        <div id="equipo-scrum" class="content-section">
+            <h2>Equipo principal de Scrum</h2>
+            <p><strong>Scrum Master:</strong> Sánchez Andrés</p>
+            <p><strong>Product Owner:</strong> Bonifacio Dharma</p>
+            <p><strong>Equipo de desarrollo:</strong></p>
+            <ul class="team-list">
+                <li><span class="role">Frontend:</span> Cañazaca Vasquez, Emily Lorena</li>
+                <li><span class="role">Backend:</span> Gutiérrez Gutierrez, Danahe Arleni</li>
+                <li><span class="role">UI/UX:</span> Figueroa Gonzalez, Giner Bush</li>
+                <li><span class="role">Full Stack:</span> Escobar Mejia, Alejandro Maycoll</li>
+            </ul>UI/UX
+            
+            <div class="team-specialties">
+                <h3>Especialidades Clave</h3>
+                <ul>
+                    <li>Emily: React.js, optimización de performance</li>
+                    <li>Danahe: Node.js, seguridad de datos</li>
+                    <li>Giner: Figma, diseño accesible</li>
+                    <li>Alejandro: Integraciones API, DevOps</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SPRINT BACKLOG (ADAPTADO A TU EQUIPO) -->
+        <div id="tareas" class="content-section">
+            <h2>Sprint Backlog</h2>
+            
+            <table class="backlog-table">
+                <thead>
+                    <tr>
+                        <th>Historia</th>
+                        <th>Tarea</th>
+                        <th>Esfuerzo</th>
+                        <th>Responsable</th>
+                        <th>Prioridad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Historia 1 -->
+                    <tr class="high-priority">
+                        <td rowspan="4">Historia 1: Registro seguro</td>
+                        <td>1.1: Diseñar formulario de registro</td>
+                        <td>5</td>
+                        <td>Giner Bush</td>
+                        <td>Alta</td>
+                    </tr>
+                    <tr class="high-priority">
+                        <td>1.2: Configurar base de datos</td>
+                        <td>3</td>
+                        <td>Danahe Arleni</td>
+                        <td>Alta</td>
+                    </tr>
+                    <tr class="medium-priority">
+                        <td>1.3: Implementar registro email</td>
+                        <td>5</td>
+                        <td>Emily Lorena</td>
+                        <td>Media</td>
+                    </tr>
+                    <tr class="high-priority">
+                        <td>1.4: Autenticación Google OAuth2</td>
+                        <td>8</td>
+                        <td>Alejandro Maycoll</td>
+                        <td>Alta</td>
+                    </tr>
+                    
+                    <!-- Historia 2 -->
+                    <tr class="medium-priority">
+                        <td rowspan="2">Historia 2: Reservas Instagram</td>
+                        <td>2.1: Diseñar botón de reserva</td>
+                        <td>3</td>
+                        <td>Giner Bush</td>
+                        <td>Media</td>
+                    </tr>
+                    <tr class="medium-priority">
+                        <td>2.2: Implementar redirección</td>
+                        <td>3</td>
+                        <td>Emily Lorena</td>
+                        <td>Media</td>
+                    </tr>
+                    
+                    <!-- Historia 3 -->
+                    <tr class="high-priority">
+                        <td rowspan="2">Historia 3: Visor de citas</td>
+                        <td>3.1: Interfaz calendario</td>
+                        <td>8</td>
+                        <td>Giner Bush</td>
+                        <td>Alta</td>
+                    </tr>
+                    <tr class="high-priority">
+                        <td>3.2: Notificaciones push</td>
+                        <td>8</td>
+                        <td>Danahe Arleni</td>
+                        <td>Alta</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total estimado</td>
+                        <td><strong>43 puntos</strong></td>
+                        <td colspan="2">Capacidad: 20 pts/sprint</td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <div class="sprint-distribution">
+                <h3>Distribución por Sprint</h3>
+                <div class="sprint-card">
+                    <h4>Sprint 1 (Semana 1)</h4>
+                    <ul>
+                        <li><strong>Objetivo:</strong> Bases del sistema (11 pts)</li>
+                        <li><strong>Tareas:</strong> 1.1, 1.2, 2.1</li>
+                        <li><strong>Equipo clave:</strong> Giner + Danahe</li>
+                    </ul>
+                </div>
+                
+                <div class="sprint-card">
+                    <h4>Sprint 2 (Semana 2)</h4>
+                    <ul>
+                        <li><strong>Objetivo:</strong> Funcionalidades básicas (16 pts)</li>
+                        <li><strong>Tareas:</strong> 1.3, 1.4, 2.2, 3.1</li>
+                        <li><strong>Equipo clave:</strong> Todo el equipo</li>
+                    </ul>
+                </div>
+                
+                <div class="sprint-card">
+                    <h4>Sprint 3 (Semana 3)</h4>
+                    <ul>
+                        <li><strong>Objetivo:</strong> Features avanzados (16 pts)</li>
+                        <li><strong>Tareas:</strong> 3.2</li>
+                        <li><strong>Equipo clave:</strong> Danahe + Alejandro</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCRUMBOARD -->
+        <div id="scrumboard" class="content-section">
+            <h2>SCRUMBOARD</h2>
+            <div class="board-states">
+                <div class="state-column">
+                    <h3>Por Hacer</h3>
+                    <ul>
+                        <li>3.2: Notificaciones push</li>
+                    </ul>
+                </div>
+                <div class="state-column">
+                    <h3>En Progreso</h3>
+                    <ul>
+                        <li>1.4: Autenticación </li>
+                    </ul>
+                </div>
+                <div class="state-column">
+                    <h3>Revisión</h3>
+                    <ul>
+                        <li>2.2: Redirección Facebook</li>
+                    </ul>
+                </div>
+                <div class="state-column">
+                    <h3>Revisión</h3>
+                    <ul>
+                        <li>2.2: Redirección Whatsapp </li>
+                    </ul>
+                </div>
+                <div class="state-column">
+                    <h3>Terminado</h3>
+                    <ul>
+                        <li>1.1: Diseño formulario</li>
+                        <li>1.2: Configuración BD</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-claseImagen">
+                <img src="../img/tablerorror.png" alt="Tablero ZAZDENT" class="header-image">
+                <p class="image-caption">Estado actual del tablero físico</p>
+            </div>
+        </div>
+
+        <!-- IMPEDIMENT LOG -->
+        <div id="impedimentos" class="content-section">
+            <h2>IMPEDIMENT LOG</h2>
+            <div class="impediment-list">
+                <div class="impediment-item">
+                    <h3>Problema de coordinación</h3>
+                    <p>Retraso en la aprobación de diseños por parte del cliente</p>
+                    <span class="status">En resolución</span>
+                </div>
+                
+                <div class="impediment-item">
+                    <h3>Dificultad técnica</h3>
+                    <p>Complejidad inesperada en integración OAuth2</p>
+                    <span class="status">Asignado a Alejandro</span>
+                </div>
+                
+                <div class="impediment-item resolved">
+                    <h3>Conectividad</h3>
+                    <p>Problemas en reuniones remotas solucionado con nueva plataforma</p>
+                    <span class="status">Resuelto (15/05/2025)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERRAMIENTAS -->
+        <div id="herramientas" class="content-section">
+            <h2>HERRAMIENTAS</h2>
+            
+            <div class="tools-section">
+                <h3>Tecnologías Principales</h3>
+                <ul class="tech-stack">
+                    <li><strong>Frontend:</strong> React 19, TailwindCSS</li>
+                    <li><strong>Backend:</strong> Node.js 22, MongoDB</li>
+                    <li><strong>Diseño:</strong> Figma, Adobe XD</li>
+                    <li><strong>Colaboración:</strong> Jira, Miro</li>
+                </ul>
+            </div>
+            
+            <div class="estimation-guide">
+                <h3>Planning Poker</h3>
+                <p>Escala Fibonacci modificada para estimación:</p>
+                <ul>
+                    <li><strong>1-2-3:</strong> Tareas simples (1-3 días)</li>
+                    <li><strong>5-8:</strong> Tareas complejas (1 semana)</li>
+                    <li><strong>13+:</strong> Requiere división</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EXPERIENCIA DE EQUIPO -->
+        <div id="experiencia" class="content-section">
+            <h2>Experiencia de Equipo</h2>
+            <div class="team-retrospective">
+                <h3>Logros destacados</h3>
+                <ul>
+                    <li>Excelente colaboración entre Giner (diseño) y Emily (frontend)</li>
+                    <li>Solución innovadora de Alejandro para OAuth2</li>
+                    <li>Documentación detallada de Danahe</li>
+                </ul>
+                
+                <h3>Áreas de mejora</h3>
+                <ul>
+                    <li>Coordinación en horarios flexibles</li>
+                    <li>Mayor prototipado rápido</li>
+                </ul>
+                
+                <div class="kpi-section">
+                    <h3>Métricas clave</h3>
+                    <div class="kpi-metrics">
+                        <div class="kpi">
+                            <span class="value">92%</span>
+                            <span class="label">Tareas completadas</span>
+                        </div>
+                        <div class="kpi">
+                            <span class="value">4.7/5</span>
+                            <span class="label">Satisfacción cliente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SALIDAS -->
+        <div id="salidas" class="content-section">
+            <h2>SALIDAS</h2>
+            
+            <div class="deliverables">
+                <h3>Entregables Completados</h3>
+                <ul>
+                    <li>Sistema de registro seguro con doble autenticación</li>
+                    <li>Integración funcional con Instagram</li>
+                    <li>Prototipo de visor de citas</li>
+                    <li>Documentación técnica inicial</li>
+                </ul>
+            </div>
+            
+            <div class="demo-section">
+                <h3>Próxima Demo</h3>
+                <p><strong>Fecha:</strong> 22/05/2025</p>
+                <p><strong>Foco:</strong> Flujo completo de registro y reserva</p>
+                <a href="#" class=""></a>
+            </div>
+            
+            <div class="section-claseImagen">
+                <img src="../img/flujoReserva.png" alt="Preview ZAZDENT" class="header-image">
+                <p class="image-caption">Avance demostrable del sistema</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

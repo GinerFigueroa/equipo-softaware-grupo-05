@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 19 .Diseño - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .deliverable-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .deliverable-table th, .deliverable-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .deliverable-table th {
+            background-color: #f2f2f2;
+        }
+        .deliverable-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .timeline {
+            background-color: #e2f3f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .phase {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+        .phase:last-child {
+            border-bottom: none;
+        }
+        .stakeholder-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .stakeholder-table th, .stakeholder-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../posts/post02.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/crear-entregables.jpg" alt="Enviar Entregables" class="header-image">
+            <h1>19. Diseño</h1>
+        </header>
+        
+       <div class="index-container">
+    <div class="index-list">
+        <h2>Índice de Contenidos</h2>
+        <ul>
+            <li class="index-item" data-target="equipo-xp">EQUIPO XP</li>
+            <li class="index-item" data-target="roles-xp">ROL EN XP</li>
+            <li class="index-item" data-target="planificacion">PLANIFICACIÓN DEL LANZAMIENTO</li>
+            <li class="index-item" data-target="iteracion">DURACIÓN DE ITERACIÓN</li>
+            <li class="index-item" data-target="historias">HISTORIAS DE USUARIO</li>
+            <li class="index-item" data-target="diseno">DISEÑO SIMPLE</li>
+            <li class="index-item" data-target="basedatos">MODELO DE BASE DE DATOS</li>
+            <li class="index-item" data-target="logico">MODELO LÓGICO</li>
+            <li class="index-item" data-target="crc">TARJETAS CRC</li>
+            <li class="index-item" data-target="prototipos">PROTOTIPOS</li>
+        </ul>
+    </div>
+    
+    <div class="content-area">
+        <!-- EQUIPO XP -->
+        <div id="equipo-xp" class="content-section">
+            <h2>EQUIPO XP</h2>
+            <div class="team-members">
+                <p><strong>Coach:</strong> Dharma Bonifacio</p>
+                <p><strong>Cliente:</strong> Andres Tucta</p>
+                <p><strong>Programadores:</strong></p>
+                <ul>
+                  <li>Cañazaca Vasquez, Emily Lorena</li>
+                        <li>Gutiérrez Gutierrez, Danahe Arleni</li>
+                        <li>Figueroa Gonzalez, Giner Bush</li>
+                        <li>Escobar Mejia, Alejandro Maycoll</li>
+                </ul>
+                <p><strong>Encargado de prueba:</strong> Danahe Gutierrez</p>
+                <p><strong>Tracker:</strong> Dharma Bonifacio</p>
+                <p><strong>Consultor:</strong> Ing. Arque Pantigozo Antonio</p>
+            </div>
+        </div>
+
+        <!-- ROL EN XP -->
+        <div id="roles-xp" class="content-section">
+            <h2>ROL EN XP</h2>
+            <table class="roles-table">
+                <tr>
+                    <th>Rol</th>
+                    <th>Responsable</th>
+                    <th>Responsabilidades clave</th>
+                </tr>
+                <tr>
+                    <td>Coach</td>
+                    <td>Dharma Bonifacio</td>
+                    <td>Facilitar prácticas XP, mentoría continua, resolver impedimentos</td>
+                </tr>
+                <tr>
+                    <td>Cliente</td>
+                    <td>Andres Shanches</td>
+                    <td>Definir criterios de aceptación, priorizar backlog</td>
+                </tr>
+                <tr>
+                    <td>Programadores</td>
+                    <td>Equipo dev</td>
+                    <td>Programación en parejas, refactorización, integración continua</td>
+                </tr>
+                <tr>
+                    <td>Tester</td>
+                    <td>Bonifacio</td>
+                    <td>Pruebas TDD, automatización, calidad del código</td>
+                </tr>
+                <tr>
+                    <td>Andres</td>
+                    <td>Bonifacio</td>
+                    <td>Métricas de progreso, velocidad del equipo</td>
+                </tr>
+                <tr>
+                    <td>Consultor</td>
+                    <td>Ing. Arque</td>
+                    <td>Asesoría técnica especializada</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- PLANIFICACIÓN -->
+        <div id="planificacion" class="content-section">
+            <h2>PLANIFICACIÓN DEL LANZAMIENTO</h2>
+            <div class="planning-details">
+                <h3>Estrategia de implementación</h3>
+                <ul>
+                    <li>Iteraciones de 2 semanas (Sprints XP)</li>
+                    <li>Planning Game al inicio de cada iteración</li>
+                    <li>Demo al cliente semanal</li>
+                    <li>Retrospectivas continuas</li>
+                </ul>
+                
+                <h3>Hitos principales</h3>
+                <table class="milestones">
+                    <tr>
+                        <th>Hito</th>
+                        <th>Fecha objetivo</th>
+                    </tr>
+                    <tr>
+                        <td>Release 1 (MVP)</td>
+                        <td>15/07/2025</td>
+                    </tr>
+                    <tr>
+                        <td>Release 2 (Funcionalidades clave)</td>
+                        <td>30/08/2025</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- ITERACIÓN -->
+        <div id="iteracion" class="content-section">
+            <h2>DURACIÓN DE ITERACIÓN</h2>
+            <div class="iteration-details">
+                <p><strong>Ciclo estándar:</strong> 2 semanas (10 días hábiles)</p>
+                
+                <h3>Actividades por iteración</h3>
+                <table class="iteration-activities">
+                    <tr>
+                        <th>Día</th>
+                        <th>Actividad</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Planning game + Iteration kickoff</td>
+                    </tr>
+                    <tr>
+                        <td>2-9</td>
+                        <td>Desarrollo con pair programming + Daily meetings</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Demo + Retrospectiva</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- HISTORIAS DE USUARIO -->
+        <div id="historias" class="content-section">
+            <h2>HISTORIAS DE USUARIO</h2>
+            <table class="user-stories-table">
+                <tr>
+                    <th>ID</th>
+                    <th>Descripción</th>
+                    <th>Story Points</th>
+                    <th>Prioridad</th>
+                </tr>
+                <tr>
+                    <td>HU01</td>
+                    <td>Como usuario quiero iniciar sesión para acceder al sistema</td>
+                    <td>5</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>HU02</td>
+                    <td>Como admin quiero gestionar roles de usuario</td>
+                    <td>8</td>
+                    <td>Media</td>
+                </tr>
+                <tr>
+                    <td>HU03</td>
+                    <td>Como cliente quiero filtrar productos por categoría</td>
+                    <td>3</td>
+                    <td>Crítica</td>
+                </tr>
+                <tr>
+                    <td>HU04</td>
+                    <td>Como usuario quiero recuperar mi contraseña</td>
+                    <td>5</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>HU05</td>
+                    <td>Como sistema necesito registrar logs de actividad</td>
+                    <td>2</td>
+                    <td>Baja</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- DISEÑO SIMPLE -->
+        <div id="diseno" class="content-section">
+            <h2>DISEÑO SIMPLE</h2>
+            <div class="simple-design">
+                <h3>Principios aplicados</h3>
+                <ul>
+                    <li>YAGNI (You Aren't Gonna Need It)</li>
+                    <li>KISS (Keep It Simple, Stupid)</li>
+                    <li>DRY (Don't Repeat Yourself)</li>
+                </ul>
+                
+                <h3>Decisiones clave</h3>
+                <table class="design-decisions">
+                    <tr>
+                        <th>Área</th>
+                        <th>Enfoque</th>
+                    </tr>
+                    <tr>
+                        <td>Arquitectura</td>
+                        <td>Monolítica con modularización interna</td>
+                    </tr>
+                    <tr>
+                        <td>Frontend</td>
+                        <td>Componentes reutilizables</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- MODELO BASE DE DATOS -->
+        <div id="basedatos" class="content-section">
+            <h2>MODELO DE BASE DE DATOS</h2>
+            <div class="database-model">
+                <h3>Entidades principales</h3>
+                <ul>
+                    <li>Users (id, email, password_hash, role_id)</li>
+                    <li>Products (id, name, category_id, price)</li>
+                    <li>Orders (id, user_id, status, total)</li>
+                </ul>
+                
+                <h3>Diagrama</h3>
+                <p class="diagram-link">
+                    <a href="../../modeloBaseDatos.php" target="_blank">Ver diagrama completo (PDF)</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- MODELO LÓGICO -->
+        <div id="logico" class="content-section">
+            <h2>MODELO LÓGICO</h2>
+            <div class="logical-model">
+                <h3>Flujos principales</h3>
+                <table class="workflows">
+                    <tr>
+                        <th>Proceso</th>
+                        <th>Componentes</th>
+                    </tr>
+                    <tr>
+                        <td>Autenticación</td>
+                        <td>AuthService → UserRepository → SessionManager</td>
+                    </tr>
+                    <tr>
+                        <td>Checkout</td>
+                        <td>Cart → PaymentGateway → OrderProcessor</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- TARJETAS CRC -->
+        <div id="crc" class="content-section">
+            <h2>TARJETAS CRC</h2>
+            <table class="crc-cards-table">
+                <tr>
+                    <th>Tarjeta</th>
+                    <th>Clase</th>
+                    <th>Responsabilidades</th>
+                    <th>Colaboradores</th>
+                </tr>
+                <tr>
+                    <td>CRC01</td>
+                    <td>UserController</td>
+                    <td>Gestionar flujo autenticación</td>
+                    <td>AuthService, UserRepository</td>
+                </tr>
+                <tr>
+                    <td>CRC02</td>
+                    <td>ProductService</td>
+                    <td>Lógica de negocio productos</td>
+                    <td>ProductRepository, InventoryManager</td>
+                </tr>
+                <tr>
+                    <td>CRC03</td>
+                    <td>OrderProcessor</td>
+                    <td>Coordinar proceso de compra</td>
+                    <td>PaymentGateway, NotificationService</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- PROTOTIPOS -->
+        <div id="prototipos" class="content-section">
+            <h2>PROTOTIPOS</h2>
+            <div class="prototypes-gallery">
+                <h3>Versiones disponibles</h3>
+                <table class="prototypes-table">
+                    <tr>
+                        <th>Versión</th>
+                        <th>Tipo</th>
+                        <th>Enlace</th>
+                        <th>Estado</th>
+                    </tr>
+                   
+                    <tr>
+                        <td>v0.2</td>
+                        <td>Mockup interactivo</td>
+                        <td><a href="mockup.php">Mockup</a></td>
+                        <td>En revisión</td>
+                    </tr>
+                </table>
+                
+                <h3>Capturas</h3>
+                <div class="prototype-images">
+                    <img src="../img/login.png" alt="Pantalla de login">
+                    <img src="../img/dasworb.png" alt="Dashboard principal">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Script para funcionalidad del índice
+document.querySelectorAll('.index-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const targetId = item.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+        
+        // Oculta todas las secciones
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // Muestra la sección seleccionada
+        if(targetSection) {
+            targetSection.style.display = 'block';
+            
+            // Desplazamiento suave
+            window.scrollTo({
+                top: targetSection.offsetTop - 20,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Mostrar primera sección por defecto
+document.querySelector('.content-section').style.display = 'block';
+</script>
+
+<style>
+.index-container {
+    display: flex;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.index-list {
+    width: 250px;
+    padding: 20px;
+    background: #f5f7fa;
+    border-right: 1px solid #e1e4e8;
+}
+
+.index-list h2 {
+    font-size: 18px;
+    color: #24292e;
+    margin-bottom: 15px;
+}
+
+.index-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.index-item {
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.index-item:hover {
+    background: #e1e4e8;
+    color: #0366d6;
+}
+
+.content-area {
+    flex: 1;
+    padding: 20px 30px;
+}
+
+.content-section {
+    display: none;
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.content-section h2 {
+    color: #0366d6;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+th {
+    background: #f6f8fa;
+    font-weight: 600;
+}
+
+.diagram-link, .prototype-images {
+    margin-top: 20px;
+}
+
+.prototype-images img {
+    max-width: 200px;
+    margin-right: 15px;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+</style>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

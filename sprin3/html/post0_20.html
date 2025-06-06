@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20. Código - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Estilos para el encabezado */
+        .header-with-image {
+            position: relative;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .header-buttons {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        
+        .home-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 15px;
+            background-color: #2c7be5;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .home-button:hover {
+            background-color: #1a68d1;
+        }
+        
+        .home-button svg {
+            margin-right: 8px;
+        }
+        
+        /* Estilos para el índice */
+        .index-container {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .index-list {
+            flex: 0 0 280px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 20px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .index-list h1 {
+            font-size: 1.5rem;
+            color: #2c7be5;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        
+        .index-list ol {
+            padding-left: 20px;
+        }
+        
+        .index-list li {
+            margin-bottom: 10px;
+        }
+        
+        .index-list a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .index-list a:hover {
+            color: #2c7be5;
+        }
+        
+        .index-list ul {
+            padding-left: 20px;
+            list-style-type: disc;
+            margin-top: 5px;
+        }
+        
+        /* Estilos para el contenido */
+        .content-area {
+            flex: 1;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        section {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        
+        section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        h2 {
+            color: #2c7be5;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        
+        h3 {
+            color: #444;
+            font-size: 1.1rem;
+        }
+        
+        /* Estilos para tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #e1e4e8;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #444;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Estilos para historias de usuario */
+        .user-story {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2c7be5;
+        }
+        
+        .priority-high {
+            color: #e63757;
+            font-weight: 600;
+        }
+        
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .index-container {
+                flex-direction: column;
+            }
+            
+            .index-list {
+                position: static;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../posts/post02.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/crear-entregables.jpg" alt="Código ZAZDENT" class="header-image">
+            <h1>20. Código - Sistema de Gestión Odontológica</h1>
+        </header>
+        
+        <div class="index-container">
+            <div class="index-list">
+                <h1>Índice - ZAZDENT</h1>
+                <ol>
+                    <li><a href="#equipo-scrum">Equipo Scrum</a></li>
+                    <li><a href="#backlog">Backlog del Producto</a></li>
+                    <li><a href="#equipo-xp">Equipo XP</a></li>
+                    <li><a href="#roles">Roles y Responsabilidades</a></li>
+                    <li><a href="#historias">Historias de Usuario Odontológicas</a>
+                        <ul>
+                            <li><a href="#hu01">HU01: Gestión de reservas</a></li>
+                            <li><a href="#hu02">HU02: Filtros y paginación</a></li>
+                            <li><a href="#hu03">HU03: Gestión de servicios</a></li>
+                            <li><a href="#hu04">HU04: Historiales clínicos</a></li>
+                            <li><a href="#hu05">HU05: Agendamiento de citas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#criterios">Criterios de Terminado</a></li>
+                    <li><a href="#integracion">Integración Continua</a></li>
+                    <li><a href="#pair-programming">Programación en Parejas</a></li>
+                </ol>
+            </div>
+
+            <div class="content-area">
+                <!-- Equipo Scrum -->
+                <section id="equipo-scrum">
+                    <h2>Equipo Scrum</h2>
+                    <table>
+                        <tr>
+                            <th>Rol</th>
+                            <th>Nombre</th>
+                            <th>Responsabilidades</th>
+                        </tr>
+                        <tr>
+                            <td>Scrum Master</td>
+                            <td>Sánchez Andrés</td>
+                            <td>Facilita los eventos Scrum y elimina impedimentos</td>
+                        </tr>
+                        <tr>
+                            <td>Product Owner</td>
+                            <td>Bonifacio Dharma</td>
+                            <td>Define y prioriza el backlog del producto</td>
+                        </tr>
+                        <tr>
+                            <td>Equipo Desarrollo</td>
+                            <td>Cañazaca, Gutiérrez, Figueroa, Escobar</td>
+                            <td>Implementan las funcionalidades del sistema</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Backlog del Producto -->
+                <section id="backlog">
+                    <h2>Backlog del Producto</h2>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Épica</th>
+                            <th>Prioridad</th>
+                            <th>Sprint</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Gestión de historiales clínicos digitales</td>
+                            <td>Must Have</td>
+                            <td>Sprint 1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Sistema de agendamiento de citas</td>
+                            <td>Must Have</td>
+                            <td>Sprint 2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Visualizador de radiografías DICOM</td>
+                            <td>Should Have</td>
+                            <td>Sprint 3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Módulo de facturación electrónica</td>
+                            <td>Could Have</td>
+                            <td>Sprint 4</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Equipo XP -->
+                <section id="equipo-xp">
+                    <h2>Equipo XP</h2>
+                    <table>
+                        <tr>
+                            <th>Rol</th>
+                            <th>Nombre</th>
+                            <th>Responsabilidades</th>
+                        </tr>
+                        <tr>
+                            <td>Coach</td>
+                            <td>Marjorie</td>
+                            <td>Facilita la adopción de XP y mejores prácticas</td>
+                        </tr>
+                        <tr>
+                            <td>Desarrollador Senior</td>
+                            <td>Carlos Gutiérrez</td>
+                            <td>Lidera implementación técnica y revisiones de código</td>
+                        </tr>
+                        <tr>
+                            <td>Desarrollador</td>
+                            <td>Ana Figueroa</td>
+                            <td>Implementación de funcionalidades y pruebas unitarias</td>
+                        </tr>
+                        <tr>
+                            <td>Tester</td>
+                            <td>Luis Escobar</td>
+                            <td>Pruebas de aceptación y aseguramiento de calidad</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Roles y Responsabilidades -->
+                <section id="roles">
+                    <h2>Roles y Responsabilidades</h2>
+                    <table>
+                        <tr>
+                            <th>Rol</th>
+                            <th>Responsabilidades Clave</th>
+                            <th>Habilidades Requeridas</th>
+                        </tr>
+                        <tr>
+                            <td>Odontólogo</td>
+                            <td>Validar requisitos clínicos, probar funcionalidades</td>
+                            <td>Conocimiento odontológico, experiencia con software</td>
+                        </tr>
+                        <tr>
+                            <td>Recepcionista</td>
+                            <td>Probar flujos de agendamiento, reportar problemas</td>
+                            <td>Experiencia en atención al paciente</td>
+                        </tr>
+                        <tr>
+                            <td>Administrador</td>
+                            <td>Validar reportes y módulo de facturación</td>
+                            <td>Conocimientos contables</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Historias de Usuario -->
+                <section id="historias">
+                    <h2>Historias de Usuario Odontológicas</h2>
+                    
+                    <!-- HU01 -->
+                    <article id="hu01" class="user-story">
+                        <h3>HU01: Gestión de reservas de citas</h3>
+                        <table>
+                            <tr>
+                                <td><strong>Usuario:</strong></td>
+                                <td>Recepcionista</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Descripción:</strong></td>
+                                <td>Como recepcionista, quiero filtrar citas por estado (confirmada/completada) para gestionar eficientemente el flujo de pacientes.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prioridad:</strong></td>
+                                <td class="priority-high">Alta</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Criterios Aceptación:</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>Filtro por estado funcional con opciones: Pendiente, Confirmada, Completada, Cancelada</li>
+                                        <li>Botón para cambiar estado de cita con confirmación</li>
+                                        <li>Sincronización en tiempo real con base de datos</li>
+                                        <li>Visualización de horarios ocupados en calendario</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+                    <!-- HU02 -->
+                    <article id="hu02" class="user-story">
+                        <h3>HU02: Filtros y paginación para historial de pacientes</h3>
+                        <table>
+                            <tr>
+                                <td><strong>Usuario:</strong></td>
+                                <td>Odontólogo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Descripción:</strong></td>
+                                <td>Como odontólogo, quiero filtrar y paginar el historial de tratamientos de un paciente para encontrar información relevante rápidamente.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prioridad:</strong></td>
+                                <td class="priority-high">Alta</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Criterios Aceptación:</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>Filtros por tipo de tratamiento y fecha</li>
+                                        <li>Paginación de 10 registros por página</li>
+                                        <li>Búsqueda por palabras clave en notas clínicas</li>
+                                        <li>Exportación a PDF del historial filtrado</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+                    <!-- HU03 -->
+                    <article id="hu03" class="user-story">
+                        <h3>HU03: Gestión de servicios odontológicos</h3>
+                        <table>
+                            <tr>
+                                <td><strong>Usuario:</strong></td>
+                                <td>Administrador</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Descripción:</strong></td>
+                                <td>Como administrador, quiero gestionar los servicios ofrecidos (limpieza, ortodoncia, etc.) para mantener actualizada la oferta del consultorio.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prioridad:</strong></td>
+                                <td>Media</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Criterios Aceptación:</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>CRUD completo de servicios</li>
+                                        <li>Asociación de servicios a categorías</li>
+                                        <li>Asignación de duración estimada por servicio</li>
+                                        <li>Integración con módulo de facturación</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+                    <!-- HU04 -->
+                    <article id="hu04" class="user-story">
+                        <h3>HU04: Historial clínico digital</h3>
+                        <table>
+                            <tr>
+                                <td><strong>Usuario:</strong></td>
+                                <td>Odontólogo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Descripción:</strong></td>
+                                <td>Como odontólogo, quiero acceder al historial completo de mis pacientes para ofrecer diagnósticos basados en su historia dental.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prioridad:</strong></td>
+                                <td class="priority-high">Alta</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Criterios Aceptación:</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>Visualización cronológica de tratamientos anteriores</li>
+                                        <li>Sección destacada de alergias y condiciones médicas</li>
+                                        <li>Firma digital para validación de registros</li>
+                                        <li>Integración con imágenes DICOM</li>
+                                        <li>Cumplimiento de normativas de privacidad</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+                    <!-- HU05 -->
+                    <article id="hu05" class="user-story">
+                        <h3>HU05: Agendamiento de citas por paciente</h3>
+                        <table>
+                            <tr>
+                                <td><strong>Usuario:</strong></td>
+                                <td>Paciente</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Descripción:</strong></td>
+                                <td>Como paciente, quiero agendar citas en línea para ahorrar tiempo y coordinar mejor mi tratamiento.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prioridad:</strong></td>
+                                <td>Media</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Criterios Aceptación:</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>Visualización de horarios disponibles por odontólogo</li>
+                                        <li>Selección de tipo de consulta</li>
+                                        <li>Confirmación por correo electrónico y SMS</li>
+                                        <li>Recordatorio automático 24h antes</li>
+                                        <li>Cancelación en línea con 48h de anticipación</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                </section>
+
+                <!-- Criterios de Terminado -->
+                <section id="criterios">
+                    <h2>Criterios de Terminado</h2>
+                    <ul>
+                        <li><strong>Cumplimiento normativo:</strong> HIPAA para protección de datos y normativas locales de historia clínica electrónica</li>
+                        <li><strong>Integración:</strong> Con equipos odontológicos digitales (radiografías, scanners intraorales)</li>
+                        <li><strong>Validación:</strong> Por odontólogos certificados en entorno clínico real</li>
+                        <li><strong>Pruebas:</strong> 95% de cobertura de código, incluyendo pruebas E2E de flujos críticos</li>
+                        <li><strong>Documentación:</strong> Manual de usuario completo y documentación técnica API</li>
+                        <li><strong>Performance:</strong> Tiempo de respuesta <2s para 100 usuarios concurrentes</li>
+                    </ul>
+                </section>
+
+                <!-- Integración Continua -->
+                <section id="integracion">
+                    <h2>Integración Continua</h2>
+                    <table>
+                        <tr>
+                            <th>Herramienta</th>
+                            <th>Uso</th>
+                            <th>Configuración</th>
+                        </tr>
+                        <tr>
+                            <td>GitHub Actions</td>
+                            <td>Pipeline de CI/CD</td>
+                            <td>Ejecución de pruebas en cada push, despliegue en staging tras merge a main</td>
+                        </tr>
+                        <tr>
+                            <td>SonarQube</td>
+                            <td>Análisis estático de código</td>
+                            <td>Umbral de 95% cobertura, 0 bugs críticos</td>
+                        </tr>
+                        <tr>
+                            <td>Docker</td>
+                            <td>Contenedorización</td>
+                            <td>Imágenes multi-stage para dev/prod</td>
+                        </tr>
+                        <tr>
+                            <td>Kubernetes</td>
+                            <td>Orquestación</td>
+                            <td>Despliegue en cluster gestionado con auto-escalado</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>Flujo de Integración Continua</h3>
+                    <ol>
+                        <li>Push a rama feature → Ejecución de pruebas unitarias</li>
+                        <li>Pull Request creado → Ejecución de pruebas E2E + revisión código</li>
+                        <li>Merge a main → Despliegue automático a entorno staging</li>
+                        <li>Tag de versión → Despliegue a producción con confirmación manual</li>
+                    </ol>
+                </section>
+
+                <!-- Programación en Parejas -->
+                <section id="pair-programming">
+                    <h2>Programación en Parejas</h2>
+                    <table>
+                        <tr>
+                            <th>Pareja</th>
+                            <th>Frecuencia</th>
+                            <th>Tareas</th>
+                            <th>Beneficios</th>
+                        </tr>
+                        <tr>
+                            <td>Carlos + Ana</td>
+                            <td>3 veces/semana</td>
+                            <td>Componentes complejos, integración con APIs</td>
+                            <td>Transferencia conocimiento, menos bugs</td>
+                        </tr>
+                        <tr>
+                            <td>Luis + Recepcionista</td>
+                            <td>1 vez/semana</td>
+                            <td>Pruebas de aceptación, UX</td>
+                            <td>Mejor alineación con necesidades usuario</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>Rotación de Parejas</h3>
+                    <ul>
+                        <li>Rotación semanal para evitar silos de conocimiento</li>
+                        <li>Sesiones de 2-3 horas máximo para mantener concentración</li>
+                        <li>Uso de herramientas colaborativas (VS Code Live Share)</li>
+                        <li>Retrospectivas mensuales para mejorar dinámica</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Add highlight effect
+                    targetElement.style.backgroundColor = '#e6f0ff';
+                    setTimeout(() => {
+                        targetElement.style.backgroundColor = '';
+                    }, 1500);
+                }
+            });
+        });
+        
+        // Highlight current section in index
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const indexLinks = document.querySelectorAll('.index-list a');
+            
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    currentSection = '#' + section.getAttribute('id');
+                }
+            });
+            
+            indexLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

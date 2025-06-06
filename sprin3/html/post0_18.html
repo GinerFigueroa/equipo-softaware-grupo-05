@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18. Enviar Entregables - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .deliverable-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .deliverable-table th, .deliverable-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .deliverable-table th {
+            background-color: #f2f2f2;
+        }
+        .deliverable-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .timeline {
+            background-color: #e2f3f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .phase {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+        .phase:last-child {
+            border-bottom: none;
+        }
+        .stakeholder-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .stakeholder-table th, .stakeholder-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../posts/post02.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/crear-entregables.jpg" alt="Enviar Entregables" class="header-image">
+            <h1>18. Enviar Entregables</h1>
+        </header>
+        
+        <div class="index-container">
+            <div class="index-list">
+                <h2>Índice de Contenidos</h2>
+                <ul>
+                    <li class="index-item" data-target="entradas">ENTRADAS</li>
+                    <li class="index-item" data-target="stakeholders">STAKEHOLDERS</li>
+                    <li class="index-item" data-target="entregables">ENTREGABLES ACEPTADOS</li>
+                    <li class="index-item" data-target="cronograma">CRONOGRAMA DE PLANIFICACIÓN DE LANZAMIENTO</li>
+                    <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+                    <li class="index-item" data-target="metodos">Métodos de desplazamiento organizacional</li>
+                    <li class="index-item" data-target="salidas">SALIDAS</li>
+                </ul>
+            </div>
+            
+            <div class="content-area">
+                <!-- ENTRADAS -->
+                <div id="entradas" class="content-section">
+                    <h2>ENTRADAS</h2>
+                    <p>Este documento recopila los entregables aceptados durante el sprint actual, detallando los criterios de aceptación cumplidos y el plan para su implementación y lanzamiento.</p>
+                    <p><strong>Product Owner:</strong> Bonifacio Dharma</p>
+                    
+                    <div class="section-claseImagen">
+                        <img src="../img/darma.png" alt="Entregables del Sprint" class="header-image">
+                        <p class="image-caption">Revisión de entregables con el equipo Scrum</p>
+                    </div>
+                </div>
+
+                <!-- STAKEHOLDERS -->
+                <div id="stakeholders" class="content-section">
+                    <h2>STAKEHOLDERS</h2>
+                    <table class="stakeholder-table">
+                        <tr>
+                            <th>Rol</th>
+                            <th>Nombre</th>
+                        </tr>
+                        <tr>
+                            <td>Propietarios/Odontólogos</td>
+                            <td>Diego Apaza Quispe<br>Delina Roshi Figueroa Gonzalez</td>
+                        </tr>
+                        <tr>
+                            <td>Odontóloga</td>
+                            <td>Carolay Corvacho Flores</td>
+                        </tr>
+                        <tr>
+                            <td>Técnicos Odontológicos</td>
+                            <td>Morelia Rodríguez Gaviria</td>
+                        </tr>
+                        <tr>
+                            <td>Proveedores</td>
+                            <td>Emancipación</td>
+                        </tr>
+                        <tr>
+                            <td>Contador</td>
+                            <td>Diego Apaza Quispe</td>
+                        </tr>
+                        <tr>
+                            <td>Clientes</td>
+                            <td>Personas que buscan servicios odontológicos</td>
+                        </tr>
+                        <tr>
+                            <td>Competencia</td>
+                            <td>Otros consultorios dentales en la zona</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- ENTREGABLES ACEPTADOS -->
+                <div id="entregables" class="content-section">
+                    <h2>ENTREGABLES ACEPTADOS</h2>
+                    
+                    <table class="deliverable-table">
+                        <tr>
+                            <th>Historia de Usuario</th>
+                            <th>Criterios de aceptación/Entregables</th>
+                            <th>ACEPTADO</th>
+                            <th>RECHAZADO</th>
+                        </tr>
+                        <tr>
+                            <td>Historia 1: Página web atractiva</td>
+                            <td>
+                                1. Se implementó una página web atractiva con colores vibrantes coherentes con la identidad del negocio.<br>
+                                2. Las imágenes se muestran en alta definición y están optimizadas, garantizando que no afecten el rendimiento de carga.<br>
+                                3. El contenido visual carga completamente en menos de 2 segundos en dispositivos móviles y de escritorio.
+                            </td>
+                            <td>X</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Historia 2: Barra de navegación</td>
+                            <td>
+                                1. La barra de navegación es clara, accesible, y visible en la parte superior en todas las resoluciones (diseño responsive).<br>
+                                2. Permite al usuario acceder a las secciones clave con un máximo de dos clics.<br>
+                                3. Todos los enlaces de la barra de navegación son funcionales y llevan al contenido correcto.
+                            </td>
+                            <td>X</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Historia 3: Ubicación del negocio</td>
+                            <td>
+                                1. El mapa de Google Maps ha sido integrado correctamente.<br>
+                                2. La ubicación del negocio se muestra con una marca visible.<br>
+                                3. El mapa es interactivo, permitiendo acercar y alejar el zoom.
+                            </td>
+                            <td>X</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Historia 4: Galería de servicios</td>
+                            <td>
+                                1. La galería muestra una cuadrícula de 3x3 imágenes en alta calidad.<br>
+                                2. Las imágenes y vídeos están optimizados para cargar rápidamente en diferentes dispositivos.<br>
+                                3. Al hacer clic en una imagen, esta se expande para una visualización detallada.
+                            </td>
+                            <td>X</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Historia 5: Registro de usuarios</td>
+                            <td>
+                                1. El proceso de registro está habilitado mediante la vinculación con Google.<br>
+                                2. El proceso de vinculación con Google es rápido, con no más de dos pasos, y asegura la creación correcta de la cuenta.
+                            </td>
+                            <td>X</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- CRONOGRAMA DE PLANIFICACIÓN DE LANZAMIENTO -->
+                <div id="cronograma" class="content-section">
+                    <h2>CRONOGRAMA DE PLANIFICACIÓN DE LANZAMIENTO</h2>
+                    
+                    <div class="timeline">
+                        <div class="phase">
+                            <h3>Retrospectiva (10/05/2025)</h3>
+                            <p>Revisión de los entregables completados y lecciones aprendidas para mejorar en el próximo sprint.</p>
+                        </div>
+                        
+                        <div class="phase">
+                            <h3>Pruebas Finales (10-14/05/2025)</h3>
+                            <p>Validación exhaustiva de todas las funcionalidades en diferentes dispositivos y navegadores.</p>
+                        </div>
+                        
+                        <div class="phase">
+                            <h3>Revisión con Stakeholders (13/05/2025)</h3>
+                            <p>Presentación de los entregables a los propietarios y equipo odontológico para recoger feedback.</p>
+                        </div>
+                        
+                        <div class="phase">
+                            <h3>Ajustes Finales (16/05/2025)</h3>
+                            <p>Implementación de mejoras basadas en el feedback recibido.</p>
+                        </div>
+                        
+                        <div class="phase">
+                            <h3>Lanzamiento (17/05/2025)</h3>
+                            <p>Publicación oficial de la plataforma y capacitación al personal para su uso.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HERRAMIENTAS -->
+                <div id="herramientas" class="content-section">
+                    <h2>HERRAMIENTAS</h2>
+                    <ul>
+                        <li>GitHub para control de versiones</li>
+                        <li>Google Cloud Platform para autenticación</li>
+                        <li>Google Maps API para integración de ubicación</li>
+                        <li>Figma para diseño de interfaces</li>
+                        <li>Jira para seguimiento de tareas</li>
+                    </ul>
+                </div>
+
+                <!-- MÉTODOS DE DESPLAZAMIENTO ORGANIZACIONAL -->
+                <div id="metodos" class="content-section">
+                    <h2>Métodos de desplazamiento organizacional</h2>
+                    <table>
+                        <tr>
+                            <th>Fase</th>
+                            <th>Descripción</th>
+                            <th>Responsables</th>
+                        </tr>
+                        <tr>
+                            <td>Planificación</td>
+                            <td>Definición de entregables y priorización de funcionalidades según historias de usuario</td>
+                            <td>Product Owner, Equipo de Desarrollo, Scrum Master</td>
+                        </tr>
+                        <tr>
+                            <td>Asignación de Tareas</td>
+                            <td>Distribución de responsabilidades para diseño, desarrollo y pruebas</td>
+                            <td>Product Owner, Equipo de Desarrollo</td>
+                        </tr>
+                        <tr>
+                            <td>Desarrollo y Ejecución</td>
+                            <td>Implementación de las funcionalidades priorizadas</td>
+                            <td>Equipo de Desarrollo</td>
+                        </tr>
+                        <tr>
+                            <td>Pruebas y Validación</td>
+                            <td>Verificación de funcionalidad, usabilidad y rendimiento</td>
+                            <td>Product Owner, Equipo de Desarrollo, Scrum Master</td>
+                        </tr>
+                        <tr>
+                            <td>Entrega y Retroalimentación</td>
+                            <td>Presentación a stakeholders y recolección de feedback</td>
+                            <td>Product Owner, Scrum Master, Equipo de Desarrollo</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- SALIDAS -->
+                <div id="salidas" class="content-section">
+                    <h2>SALIDAS</h2>
+                    <h3>Acuerdo de entregables funcionables</h3>
+                    <p>El equipo Scrum y los stakeholders acuerdan que los siguientes entregables cumplen con los criterios de aceptación definidos y están listos para su implementación:</p>
+                    <ul>
+                        <li>Página web principal con diseño responsive y carga optimizada</li>
+                        <li>Sistema de navegación funcional en todas las secciones</li>
+                        <li>Integración completa con Google Maps para mostrar la ubicación</li>
+                        <li>Galería de servicios con visualización detallada</li>
+                        <li>Proceso de registro mediante Google funcional</li>
+                    </ul>
+                    <p><strong>Fecha de acuerdo:</strong> 15 de mayo de 2025</p>
+                    <p><strong>Firma del Product Owner:</strong> Bonifacio Dharma</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
