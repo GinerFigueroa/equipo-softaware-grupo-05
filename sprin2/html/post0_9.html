@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprometer Historias de Usuario - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .user-story-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+        .sprint-timeline {
+            background-color: #e2f3f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .commitment-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .commitment-table th, .commitment-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .commitment-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../posts/post02.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/compromoter-historias-usuario.jpg" alt="Comprometer Historias de Usuario" class="header-image">
+            <h1>9. Comprometer Historias de Usuario</h1>
+        </header>
+        
+        <div class="index-container">
+    <div class="index-list">
+        <h2>Índice de Contenidos</h2>
+        <ul>
+            <li class="index-item" data-target="entradas">ENTRADAS</li>
+            <li class="index-item" data-target="equipo-scrum">Equipo Principal de Scrum</li>
+            <li class="index-item" data-target="historias">Historias de usuario</li>
+            <li class="index-item" data-target="duracion">Duración del Sprint</li>
+            <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+            <li class="index-item" data-target="salidas">SALIDAS</li>
+        </ul>
+    </div>
+    
+    <div class="content-area">
+        <!-- ENTRADAS -->
+        <div id="entradas" class="content-section">
+            <h2>ENTRADAS</h2>
+            <p>Comprometer historias de usuario en Scrum es esencial para el sistema odontológico ZAZDENT porque asegura que el equipo trabaje de manera organizada y alineada con los objetivos del negocio, al establecer expectativas claras sobre lo que se debe entregar durante el sprint. Este compromiso fomenta la responsabilidad y la rendición de cuentas dentro del equipo, lo que facilita una planificación realista basada en la capacidad del equipo y evita sobrecargas. Además, permite entregar valor de forma constante, centrando el esfuerzo en lo más prioritario para la clínica dental y sus pacientes.</p>
+        
+            <div class="section-claseImagen">
+                <img src="../img/Comprometehistorias.jpg" alt="Importancia del compromiso en Scrum" class="header-image">
+                <p class="image-caption">Proceso de compromiso de historias en equipo dental</p>
+            </div>
+        </div>
+
+        <!-- EQUIPO -->
+        <div id="equipo-scrum" class="content-section">
+            <h2>Equipo principal de Scrum</h2>
+            <table class="team-table">
+                <tr>
+                    <th>Rol</th>
+                    <th>Nombre</th>
+                    <th>Responsabilidad clave</th>
+                </tr>
+                <tr>
+                    <td>Scrum Master</td>
+                    <td>Sánchez Andrés</td>
+                    <td>Facilitar procesos ágiles y remover obstáculos</td>
+                </tr>
+                <tr>
+                    <td>Product Owner</td>
+                    <td>Bonifacio Dharma</td>
+                    <td>Priorizar backlog y maximizar ROI</td>
+                </tr>
+                <tr>
+                    <td>Desarrolladora Frontend</td>
+                    <td>Cañazaca Vasquez, Emily Lorena</td>
+                    <td>Interfaces de usuario y experiencia paciente</td>
+                </tr>
+                <tr>
+                    <td>Desarrolladora Backend</td>
+                    <td>Gutiérrez Gutierrez, Danahe Arleni</td>
+                    <td>Seguridad de datos y API</td>
+                </tr>
+                <tr>
+                    <td>Diseñador UI/UX</td>
+                    <td>Figueroa Gonzalez, Giner Bush</td>
+                    <td>Flujos de usuario y prototipos</td>
+                </tr>
+                <tr>
+                    <td>QA Clínico</td>
+                    <td>Escobar Mejia, Alejandro Maycoll</td>
+                    <td>Validación funcional y cumplimiento HIPAA</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- HISTORIAS -->
+        <div id="historias" class="content-section">
+            <h2>Historias de usuario estimadas</h2>
+            
+            <table class="user-story-table">
+                <tr>
+                    <th>ID</th>
+                    <th>Historia de Usuario</th>
+                    <th>Puntos</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <strong>Como</strong> paciente, <strong>quiero</strong> agendar una cita desde la página web, <strong>para</strong> reservar una atención odontológica fácilmente.
+                    </td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <strong>Como</strong> visitante del sitio, <strong>quiero</strong> ver una lista de los tratamientos dentales ofrecidos, <strong>para</strong> saber qué servicios puedo recibir en la clínica.
+                    </td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>
+                        <strong>Como</strong> paciente nuevo, <strong>quiero</strong> ver los perfiles del personal de salud, <strong>para</strong> sentir confianza con quienes me atenderán.
+                    </td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>
+                        <strong>Como</strong> propietario, <strong>quiero</strong> acceder a reportes financieros y de productividad, <strong>para</strong> tomar decisiones estratégicas sobre el consultorio.
+                    </td>
+                    <td>13</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- DURACIÓN -->
+        <div id="duracion" class="content-section">
+            <h2>Duración del Sprint</h2>
+            <div class="sprint-info">
+                <p>El sprint tendrá una duración de <strong>3 semanas (21 días)</strong>, comenzando el <strong>15 de abril</strong> hasta el <strong>6 de Mayo</strong>.</p>
+                <p><strong>Capacidad del equipo:</strong> 20 puntos por sprint</p>
+                <p><strong>Objetivo:</strong> Entregar el primer incremento funcional del sistema odontológico con las funcionalidades básicas de agendamiento y perfil clínico.</p>
+            </div>
+            
+            <div class="section-claseImagen">
+                <img src="../img/DuraciónSprint.jpg" alt="Calendario del sprint" class="header-image">
+                <p class="image-caption">Planificación temporal del sprint dental</p>
+            </div>
+        </div>
+
+        <!-- HERRAMIENTAS -->
+        <div id="herramientas" class="content-section">
+            <h2>HERRAMIENTAS</h2>
+            <h3>Sesiones de planificación del sprint</h3>
+            <p>El proyecto se desarrollará mediante sprints de 3 semanas, priorizando las funcionalidades más importantes para la clínica dental. El primer sprint se enfocará en:</p>
+            
+            <div class="planning-focus">
+                <h4>Épica principal:</h4>
+                <p>Creación de la funcionalidad básica del sistema ZAZDENT</p>
+                
+                <h4>Componentes clave:</h4>
+                <ul>
+                    <li>Página informativa principal (Landing page)</li>
+                    <li>Sistema básico de gestión de citas</li>
+                    <li>Perfil del equipo odontológico</li>
+                    <li>Integración inicial con redes sociales</li>
+                </ul>
+            </div>
+            
+            <div class="section-claseImagen">
+                <img src="../img/reunion-planificacion.jpg" alt="Reunión de planificación" class="header-image">
+                <p class="image-caption">Sesión de planificación con el equipo dental</p>
+            </div>
+        </div>
+
+        <!-- SALIDAS -->
+        <div id="salidas" class="content-section">
+            <h2>SALIDAS</h2>
+            <h3>Historias de usuario comprometidas</h3>
+            <p>Basado en la capacidad del equipo (20 puntos/sprint), se han comprometido las siguientes historias para el primer sprint:</p>
+            
+            <table class="commitment-table">
+                <tr>
+                    <th>ID</th>
+                    <th>Historia de Usuario</th>
+                    <th>Puntos</th>
+                    <th>Responsables</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Agendar una cita</td>
+                    <td>8</td>
+                    <td>Emily (Frontend), Danahe (Backend)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ver los tratamientos disponibles</td>
+                    <td>5</td>
+                    <td>Giner (Diseño), Alejandro (QA)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Conocer al equipo odontológico</td>
+                    <td>3</td>
+                    <td>Emily (Frontend), Giner (UI)</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>Total comprometido</strong></td>
+                    <td><strong>16/20</strong></td>
+                    <td></td>
+                </tr>
+            </table>
+            
+            <h3>Plan de trabajo detallado</h3>
+            <div class="work-plan">
+                <div class="sprint-week">
+                    <h4>Semana 1 (15-21 abril):</h4>
+                    <ul>
+                        <li>Diseño de interfaces (Giner)</li>
+                        <li>Configuración inicial del backend (Danahe)</li>
+                        <li>Implementación del perfil del equipo (Emily)</li>
+                    </ul>
+                </div>
+                
+                <div class="sprint-week">
+                    <h4>Semana 2 (22-28 abril):</h4>
+                    <ul>
+                        <li>Desarrollo del módulo de agendamiento (Emily/Danahe)</li>
+                        <li>Implementación de catálogo de tratamientos (Giner/Alejandro)</li>
+                        <li>Primera revisión de calidad (Alejandro)</li>
+                    </ul>
+                </div>
+                
+                <div class="sprint-week">
+                    <h4>Semana 3 (29 abril-6 mayo):</h4>
+                    <ul>
+                        <li>Integración final de componentes</li>
+                        <li>Pruebas de aceptación (Equipo completo)</li>
+                        <li>Preparación para demostración (Andrés/Dharma)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-claseImagen">
+                <img src="../img/tablero-kanban.jpg" alt="Tablero Kanban de trabajo" class="header-image">
+                <p class="image-caption">Tablero Kanban para seguimiento del sprint dental</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

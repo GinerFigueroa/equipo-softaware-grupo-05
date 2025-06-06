@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimar Tareas - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .estimation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .estimation-table th, .estimation-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .estimation-table th {
+            background-color: #f2f2f2;
+        }
+        .estimation-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .fibonacci-scale {
+            background-color: #e2f3f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .task-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../posts/post02.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/Realizar-Daily-Standup.jpg" alt="Estimar Tareas" class="header-image">
+            <h1>13. Crear Entregables</h1>
+        </header>
+        
+       <div class="index-container">
+    <div class="index-list">
+        <h2>Índice de Contenidos</h2>
+        <ul>
+            <li class="index-item selected" data-target="entradas">ENTRADAS</li>
+            <li class="index-item" data-target="equipo-scrum">Equipo Principal de Scrum</li>
+            <li class="index-item" data-target="burndown">Sprint Burndown Chart</li>
+            <li class="index-item" data-target="impedimentos">Impediment Log</li>
+            <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+            <li class="index-item" data-target="daily">Daily Standup</li>
+            <li class="index-item" data-target="preguntas">Tres preguntas diarias</li>
+            <li class="index-item" data-target="salidas">SALIDAS</li>
+            <li class="index-item" data-target="burndown-actualizada">Burndown Actualizada</li>
+            <li class="index-item" data-target="impediment-log">Impedimentos Resueltos</li>
+        </ul>
+    </div>
+    
+    <div class="content-area">
+        <!-- ENTRADAS -->
+        <div id="entradas" class="content-section active">
+            <h2>ENTRADAS</h2>
+            <p>El Daily Standup para el sistema de gestión dental ZAZDENT es la reunión diaria donde el equipo sincroniza actividades y planifica las próximas 24 horas. Este evento ágil permite identificar rápidamente impedimentos y mantener el flujo de trabajo óptimo.</p>
+            
+            <div class="section-claseImagen">
+                <img src="../img/gruporeuni.png" alt="Daily Standup ZAZDENT" class="header-image">
+                <p class="image-caption">Equipo ZAZDENT durante el daily standup</p>
+            </div>
+        </div>
+
+        <!-- EQUIPO (VERSIÓN MANTENIDA) -->
+        <div id="equipo-scrum" class="content-section">
+            <h2>Equipo Principal de Scrum</h2>
+            <div class="team-roles">
+                <div class="role-card">
+                    <h3>Scrum Master</h3>
+                    <p>Sánchez Andrés</p>
+                    <ul>
+                        <li>Facilita eventos Scrum</li>
+                        <li>Elimina impedimentos</li>
+                    </ul>
+                </div>
+                
+                <div class="role-card">
+                    <h3>Product Owner</h3>
+                    <p>Bonifacio Dharma</p>
+                    <ul>
+                        <li>Prioriza el backlog</li>
+                        <li>Valida requerimientos</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="dev-team">
+                <h3>Equipo de Desarrollo</h3>
+                <div class="dev-grid">
+                    <div class="dev-card">
+                        <h4>Frontend</h4>
+                        <p>Cañazaca Vasquez, Emily Lorena</p>
+                        <span class="expertise">React | Tailwind</span>
+                    </div>
+                    <div class="dev-card">
+                        <h4>Backend</h4>
+                        <p>Gutiérrez Gutierrez, Danahe Arleni</p>
+                        <span class="expertise">Node.js | MongoDB</span>
+                    </div>
+                    <div class="dev-card">
+                        <h4>UI/UX</h4>
+                        <p>Figueroa Gonzalez, Giner Bush</p>
+                        <span class="expertise">Figma | Prototipado</span>
+                    </div>
+                    <div class="dev-card">
+                        <h4>Full Stack</h4>
+                        <p>Escobar Mejia, Alejandro Maycoll</p>
+                        <span class="expertise">API Integration | DevOps</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BURNDOWN CHART -->
+        <div id="burndown" class="content-section">
+            <h2>Sprint Burndown Chart</h2>
+            <div class="chart-container">
+                <img src="../img/BurndownChart.jpg" alt="Burndown Chart Sprint 3" class="header-image">
+                <div class="chart-analysis">
+                    <h3>Análisis de Progreso</h3>
+                    <ul>
+                        <li><strong>Línea ideal:</strong> 20 puntos/día</li>
+                        <li><strong>Real:</strong> 18 puntos/día (90% eficiencia)</li>
+                        <li><strong>Desviación:</strong> 2 puntos por retraso en tarea 1.4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMPEDIMENT LOG -->
+        <div id="impedimentos" class="content-section">
+            <h2>Impediment Log</h2>
+            <div class="impediment-board">
+                <div class="impediment-column">
+                    <h3>Nuevos</h3>
+                    <div class="impediment-card">
+                        <h4>Problemas con OAuth2</h4>
+                        <p>Dificultades en configuración Google API</p>
+                        <span class="assignee">Asignado a Alejandro</span>
+                    </div>
+                </div>
+                
+                <div class="impediment-column">
+                    <h3>En Progreso</h3>
+                    <div class="impediment-card">
+                        <h4>Coordinación de diseños</h4>
+                        <p>Retraso en aprobación de interfaces</p>
+                        <span class="assignee">Scrum Master gestionando</span>
+                    </div>
+                </div>
+                
+                <div class="impediment-column">
+                    <h3>Resueltos</h3>
+                    <div class="impediment-card resolved">
+                        <h4>Problemas de hosting</h4>
+                        <p>Configuración completada el 14/05</p>
+                        <span class="resolved-date">Resuelto</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERRAMIENTAS -->
+        <div id="herramientas" class="content-section">
+            <h2>HERRAMIENTAS</h2>
+            <div class="tools-section">
+                <div class="tool-card">
+                    <img src="../img/jiras.jpg" alt="Jira" class="header-image">
+                    <h3>Jira Software</h3>
+                    <p>Seguimiento de tareas y sprints</p>
+                </div>
+                
+                <div class="tool-card">
+                    <img src="../img/diseñoColaborativo.jpg" alt="Figma" class="header-image">
+                    <h3>Figma</h3>
+                    <p>Diseño colaborativo de interfaces</p>
+                </div>
+                
+                <div class="tool-card">
+                    <img src="../img/comuncacionEquipo.jpg" alt="Slack" class="header-image">
+                    <h3>Slack</h3>
+                    <p>Comunicación diaria del equipo</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAILY STANDUP -->
+        <div id="daily" class="content-section">
+            <h2>Daily Standup</h2>
+            <div class="standup-stats">
+                <div class="stat-card">
+                    <span class="stat-value">15 min</span>
+                    <span class="stat-label">Duración promedio</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">09:00 AM</span>
+                    <span class="stat-label">Hora consistente</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Asistencia sprint</span>
+                </div>
+            </div>
+            
+            <div class="standup-rules">
+                <h3>Reglas clave</h3>
+                <ol>
+                    <li>Solo habla quien tiene el token</li>
+                    <li>Máximo 1 minuto por persona</li>
+                    <li>Discusiones técnicas posteriores</li>
+                    <li>Scrum Master toma notas de impedimentos</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- TRES PREGUNTAS DIARIAS -->
+        <div id="preguntas" class="content-section">
+            <h2>Tres Preguntas Diarias</h2>
+            
+            <div class="daily-qa">
+                <div class="question-block">
+                    <h3>¿Qué hicimos ayer? <span class="date">14/05/2025</span></h3>
+                    <ul>
+                        <li><strong>Emily:</strong> Finalizó diseño responsive del botón Instagram</li>
+                        <li><strong>Danahe:</strong> Implementó endpoints para registro citas</li>
+                        <li><strong>Giner:</strong> Prototipó flujo recordatorios</li>
+                    </ul>
+                </div>
+                
+                <div class="question-block">
+                    <h3>¿Qué haremos hoy? <span class="date">15/05/2025</span></h3>
+                    <ul>
+                        <li><strong>Alejandro:</strong> Terminará integración OAuth2 (tarea 1.4)</li>
+                        <li><strong>Equipo:</strong> Revisión conjunta de pull requests</li>
+                    </ul>
+                </div>
+                
+                <div class="question-block">
+                    <h3>Dificultades</h3>
+                    <ul>
+                        <li><strong>Giner:</strong> Retraso en feedback de diseños</li>
+                        <li><strong>Danahe:</strong> Complejidad en lógica de recordatorios</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SALIDAS -->
+        <div id="salidas" class="content-section">
+            <h2>SALIDAS</h2>
+            <div class="deliverables-container">
+                <div class="deliverable-card">
+                    <h3>Entregables Técnicos</h3>
+                    <ul>
+                        <li>Módulo de autenticación completo</li>
+                        <li>Integración Instagram funcional</li>
+                        <li>Documentación API actualizada</li>
+                    </ul>
+                </div>
+                
+                <div class="deliverable-card">
+                    <h3>Próximos Pasos</h3>
+                    <ul>
+                        <li>Demo al cliente (20/05)</li>
+                        <li>Retrospectiva del sprint</li>
+                        <li>Planificación siguiente sprint</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- BURNDOWN ACTUALIZADA -->
+        <div id="burndown-actualizada" class="content-section">
+            <h2>Burndown Actualizada</h2>
+            <div class="updated-chart">
+                <img src="../img/burnnnactulizadad.png" alt="Burndown al 15/05" class="header-image">
+                <div class="chart-notes">
+                    <h3>Notas clave</h3>
+                    <p>Se aceleró el ritmo después de resolver el bloqueo de OAuth2. Proyectamos completar todas las tareas para el 18/05.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMPEDIMENTOS RESUELTOS -->
+        <div id="impediment-log" class="content-section">
+            <h2>Impedimentos Resueltos</h2>
+            <table class="resolved-table">
+                <tr>
+                    <th>Impedimento</th>
+                    <th>Solución</th>
+                    <th>Fecha</th>
+                </tr>
+                <tr>
+                    <td>Configuración hosting</td>
+                    <td>Contratación de VPS alternativo</td>
+                    <td>14/05</td>
+                </tr>
+                <tr>
+                    <td>Problemas de conectividad</td>
+                    <td>Migración a plataforma Zoom Pro</td>
+                    <td>10/05</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

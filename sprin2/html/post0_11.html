@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimar Tareas - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .estimation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .estimation-table th, .estimation-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .estimation-table th {
+            background-color: #f2f2f2;
+        }
+        .estimation-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .fibonacci-scale {
+            background-color: #e2f3f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .task-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../posts/post02.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/estimar-tareas.jpg" alt="Estimar Tareas" class="header-image">
+            <h1>11. Estimar Tareas</h1>
+        </header>
+        
+        <div class="index-container">
+    <div class="index-list">
+        <h2>Índice de Contenidos</h2>
+        <ul>
+            <li class="index-item" data-target="entradas">ENTRADAS</li>
+            <li class="index-item" data-target="equipo-scrum">Equipo Principal de Scrum</li>
+            <li class="index-item" data-target="tareas">Lista de tareas</li>
+            <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+            <li class="index-item" data-target="salidas">SALIDAS</li>
+        </ul>
+    </div>
+    
+    <div class="content-area">
+        <!-- ENTRADAS -->
+        <div id="entradas" class="content-section">
+            <h2>ENTRADAS</h2>
+            <p>Este proceso se lleva a cabo durante la planificación del sprint y ayuda a desglosar las historias de usuario en tareas más pequeñas y manejables para el sistema de gestión de citas. Las estimaciones proporcionan una base para la planificación efectiva, permitiendo al equipo establecer expectativas realistas sobre lo que se puede lograr en el tiempo asignado, optimizando así la gestión del negocio y la experiencia del cliente.</p>
+        
+            <div class="section-claseImagen">
+                <img src="../img/importancia-estimacion-tareas.jpg" alt="Importancia de estimar tareas" class="header-image">
+                <p class="image-caption">Sesión de desglose de tareas para el sistema de citas</p>
+            </div>
+        </div>
+
+        <!-- EQUIPO -->
+        <div id="equipo-scrum" class="content-section">
+            <h2>Equipo principal de Scrum</h2>
+            <table class="team-table">
+                <tr>
+                    <th>Rol</th>
+                    <th>Nombre</th>
+                    <th>Especialidad</th>
+                </tr>
+                <tr>
+                    <td>Scrum Master</td>
+                    <td>Andres, Shanches</td>
+                    <td>Facilitación de ceremonias ágiles</td>
+                </tr>
+                <tr>
+                    <td>Product Owner</td>
+                    <td>Bonifacio Dharma</td>
+                    <td>Priorización de backlog</td>
+                </tr>
+                <tr>
+                    
+                    <td>QA Clínico</td>
+                    <td>Cañazaca Vasquez, Emily Lorena</td>
+                    <td>Interfaces paciente-odontólogo</td>
+                </tr>
+                <tr>
+                    <td>Desarrolladora Backend</td>
+                    <td>Gutiérrez Gutierrez, Danahe Arleni</td>
+                    <td>Seguridad de datos clínicos</td>
+                </tr>
+                <tr>
+                      <td>Desarrolladora Frontend</td>
+                    <td>Figueroa Gonzalez, Giner Bush</td>
+                    <td>Experiencia de usuario dental</td>
+                </tr>
+                <tr>
+                    <td>Diseñador UI/UX</td>
+                    <td>Escobar Mejia, Alejandro Maycoll</td>
+                    <td>Validación de requisitos médicos</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- TAREAS -->
+        <div id="tareas" class="content-section">
+            <h2>Lista de tareas</h2>
+            
+            <div class="task-card">
+                <h3>Historia 1: Registro de usuarios</h3>
+                <p><strong>Tarea 1.1:</strong> Diseñar la interfaz del formulario de registro, incluyendo opciones de registro por correo y usuario.</p>
+                <p><strong>Detalles:</strong> Debe incluir validación en tiempo real y mensajes de error claros</p>
+                
+                <p><strong>Tarea 1.2:</strong> Configurar la base de datos para almacenar la información de los usuarios de manera segura.</p>
+                <p><strong>Detalles:</strong> Implementar cifrado de contraseñas y protección de datos</p>
+                
+                <p><strong>Tarea 1.3:</strong> Implementar la funcionalidad de registro con correo y contraseña.</p>
+                <p><strong>Detalles:</strong> Flujo completo desde formulario hasta confirmación</p>
+                
+                <p><strong>Tarea 1.4:</strong> Configurar la autenticación con gmail utilizando OAuth2.</p>
+                <p><strong>Detalles:</strong> Integración con API de Google y manejo de tokens</p>
+            </div>
+            
+            <div class="task-card">
+                <h3>Historia 2: Reserva por Instagram</h3>
+                <p><strong>Tarea 2.1:</strong> Crear el diseño de la sección de reserva con botón de enlace a WhatsApp.</p>
+                <p><strong>Detalles:</strong> Diseño responsive que destaque el CTA principal</p>
+                
+                <p><strong>Tarea 2.2:</strong> Implementar el enlace al chat de Instagram.</p>
+                <p><strong>Detalles:</strong> Validar apertura en app móvil si está instalada</p>
+            </div>
+            
+            <div class="task-card">
+                <h3>Historia 3: Visor de citas</h3>
+                <p><strong>Tarea 3.1:</strong> Diseñar e implementar la interfaz del visor de citas.</p>
+                <p><strong>Detalles:</strong> Vista calendario y lista, filtros por fecha/estado</p>
+                
+                <p><strong>Tarea 3.2:</strong> Implementar funcionalidad de recordatorios.</p>
+                <p><strong>Detalles:</strong> Notificaciones push y por correo programables</p>
+            </div>
+            
+            <div class="task-card">
+                <h3>Historia 4: Gestión avanzada</h3>
+                <p><strong>Tarea 4.1:</strong> Diseñar interfaz para registro de citas y empleados.</p>
+                <p><strong>Detalles:</strong> Formularios administrativos con validación</p>
+                
+                <p><strong>Tarea 4.2:</strong> Implementar funcionalidad de registro.</p>
+                <p><strong>Detalles:</strong> CRUD completo con historial de cambios</p>
+                
+                <p><strong>Tarea 4.3:</strong> Desarrollar asignación de citas a empleados.</p>
+                <p><strong>Detalles:</strong> Lógica de asignación automática/manual</p>
+            </div>
+        </div>
+
+        <!-- HERRAMIENTAS -->
+        <div id="herramientas" class="content-section">
+            <h2>HERRAMIENTAS</h2>
+            
+            <div class="estimation-method">
+                <h3>Criterios de estimación</h3>
+                <p>Utilizaremos Planning Poker con escala Fibonacci modificada para estimar el esfuerzo relativo de cada tarea:</p>
+                
+                <table class="estimation-scale">
+                    <tr>
+                        <th>Puntos</th>
+                        <th>Esfuerzo equivalente</th>
+                        <th>Tipo de tarea</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2-4 horas</td>
+                        <td>Cambios mínimos o ajustes</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>1/2 día</td>
+                        <td>Tareas simples sin dependencias</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>1 día</td>
+                        <td>Tareas estándar</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>2-3 días</td>
+                        <td>Tareas con múltiples componentes</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>1 semana</td>
+                        <td>Tareas complejas con integraciones</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>2 semanas</td>
+                        <td>Épicas que requieren división</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="process-description">
+                <h3>Flujo de estimación</h3>
+                <ol>
+                    <li><strong>Preparación:</strong> El PO presenta cada historia y sus criterios de aceptación</li>
+                    <li><strong>Desglose:</strong> El equipo divide historias en tareas técnicas</li>
+                    <li><strong>Discusión:</strong> Debate sobre complejidades y dependencias</li>
+                    <li><strong>Votación:</strong> Estimación simultánea con cartas Planning Poker</li>
+                    <li><strong>Consenso:</strong> Discusión de discrepancias y votación final</li>
+                    <li><strong>Registro:</strong> Documentación de estimaciones acordadas</li>
+                </ol>
+            </div>
+            
+            <div class="section-claseImagen">
+                <img src="../img/Planninmmmmmpoker.png" alt="Sesión de Planning Poker" class="header-image">
+                <p class="image-caption">Equipo realizando estimaciones para el sistema de gestión</p>
+            </div>
+        </div>
+
+        <!-- SALIDAS -->
+        <div id="salidas" class="content-section">
+            <h2>SALIDAS</h2>
+            
+            <div class="estimation-results">
+                <h3>Estimación detallada de tareas</h3>
+                <table class="detailed-estimation">
+                    <thead>
+                        <tr>
+                            <th>Historia</th>
+                            <th>Tarea</th>
+                            <th>Puntos</th>
+                            <th>Duración estimada</th>
+                            <th>Responsable</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Historia 1 -->
+                        <tr>
+                            <td rowspan="4">Historia 1: Registro</td>
+                            <td>1.1: Diseñar formulario</td>
+                            <td>5</td>
+                            <td>2-3 días</td>
+                            <td>Alejandro</td>
+                        </tr>
+                        <tr>
+                            <td>1.2: Configurar BD</td>
+                            <td>3</td>
+                            <td>1 día</td>
+                            <td>Danahe</td>
+                        </tr>
+                        <tr>
+                            <td>1.3: Registro email</td>
+                            <td>5</td>
+                            <td>2-3 días</td>
+                            <td>Giner</td>
+                        </tr>
+                        <tr>
+                            <td>1.4: Auth Google</td>
+                            <td>8</td>
+                            <td>1 semana</td>
+                            <td>Alejandro</td>
+                        </tr>
+                        
+                        <!-- Historia 2 -->
+                        <tr>
+                            <td rowspan="2">Historia 2: Reserva Instagram</td>
+                            <td>2.1: Diseñar sección</td>
+                            <td>3</td>
+                            <td>1 día</td>
+                            <td>Giner</td>
+                        </tr>
+                        <tr>
+                            <td>2.2: Implementar enlace</td>
+                            <td>3</td>
+                            <td>1 día</td>
+                            <td>Danahe</td>
+                        </tr>
+                        
+                        <!-- Historia 3 -->
+                        <tr>
+                            <td rowspan="2">Historia 3: Visor citas</td>
+                            <td>3.1: Interfaz visor</td>
+                            <td>8</td>
+                            <td>1 semana</td>
+                            <td>Emely</td>
+                        </tr>
+                        <tr>
+                            <td>3.2: Recordatorios</td>
+                            <td>8</td>
+                            <td>1 semana</td>
+                            <td>Danahe</td>
+                        </tr>
+                        
+                        <!-- Historia 4 -->
+                        <tr>
+                            <td rowspan="3">Historia 4: Gestión</td>
+                            <td>4.1: Diseñar interfaz</td>
+                            <td>5</td>
+                            <td>2-3 días</td>
+                            <td>Giner</td>
+                        </tr>
+                        <tr>
+                            <td>4.2: Registro citas</td>
+                            <td>8</td>
+                            <td>1 semana</td>
+                            <td>Emely</td>
+                        </tr>
+                        <tr>
+                            <td>4.3: Asignación</td>
+                            <td>8</td>
+                            <td>1 semana</td>
+                            <td>Danhae</td>
+                        </tr>
+                        
+                        <!-- Total -->
+                        <tr class="total-row">
+                            <td colspan="2"><strong>Total</strong></td>
+                            <td><strong>64</strong></td>
+                            <td><strong>~3 semanas</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="sprint-planning">
+                <h3>Planificación estratégica</h3>
+                <p>Considerando la capacidad del equipo (20 puntos/sprint) y las dependencias técnicas:</p>
+                
+                <div class="sprint">
+                    <h4>Sprint 1 (Semana 1):</h4>
+                    <ul>
+                        <li>Tareas 1.1, 1.2, 2.1, 2.2 (16 puntos)</li>
+                        <li>Objetivo: Flujos básicos de registro y reserva</li>
+                    </ul>
+                </div>
+                
+                <div class="sprint">
+                    <h4>Sprint 2 (Semana 2):</h4>
+                    <ul>
+                        <li>Tareas 1.3, 1.4, 4.1 (18 puntos)</li>
+                        <li>Objetivo: Autenticación completa y diseños administrativos</li>
+                    </ul>
+                </div>
+                
+                <div class="sprint">
+                    <h4>Sprint 3 (Semana 3):</h4>
+                    <ul>
+                        <li>Tareas 3.1, 3.2, 4.2, 4.3 (30 puntos - dividir)</li>
+                        <li>Objetivo: Funcionalidades avanzadas de gestión</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-claseImagen">
+                <img src="../img/Planninmmmmmpoker.png" alt="Tablero de planificación" class="header-image">
+                <p class="image-caption">Planificación visual de sprints para el sistema</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

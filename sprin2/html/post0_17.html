@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17. Retrospectiva del Sprint - ZAZDENT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .retrospective-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .retrospective-table th, .retrospective-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .retrospective-table th {
+            background-color: #f2f2f2;
+        }
+        .retrospective-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .improvement-box {
+            background-color: #e2f3f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .action-item {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+        .category-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            color: white;
+        }
+        .keep-doing { background-color: #2ecc71; }
+        .start-doing { background-color: #3498db; }
+        .stop-doing { background-color: #e74c3c; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-with-image">
+            <div class="header-buttons">
+                <a href="../../posts/post02.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                    </svg>
+                    Inicio
+                </a>
+            </div>
+            
+            <img src="../../imagenes/retrospectiva-sprint.jpg" alt="Retrospectiva del Sprint" class="header-image">
+            <h1>17. Retrospectiva del Sprint</h1>
+        </header>
+        
+        <div class="index-container">
+    <div class="index-list">
+        <h2>Índice de Contenidos</h2>
+        <ul>
+            <li class="index-item" data-target="entradas">ENTRADAS</li>
+            <li class="index-item" data-target="salidas-demo">SALIDAS DE DEMOSTRAR Y VALIDAR EL SPRINT</li>
+            <li class="index-item" data-target="herramientas">HERRAMIENTAS</li>
+            <li class="index-item" data-target="reunion">Reunión de Retrospectiva del Sprint</li>
+            <li class="index-item" data-target="salidas">SALIDAS</li>
+        </ul>
+    </div>
+    
+    <div class="content-area">
+        <!-- ENTRADAS -->
+        <div id="entradas" class="content-section">
+            <h2>ENTRADAS</h2>
+            <p>La retrospectiva del sprint es una reunión donde el equipo Scrum reflexiona sobre el sprint recién completado para identificar mejoras en el proceso y la colaboración, con el objetivo de aumentar la calidad y efectividad en el próximo sprint.</p>
+        </div>
+
+        <!-- SALIDAS DE DEMOSTRAR Y VALIDAR EL SPRINT -->
+        <div id="salidas-demo" class="content-section">
+            <h2>SALIDAS DE DEMOSTRAR Y VALIDAR EL SPRINT</h2>
+            
+            <table class="retrospective-table">
+                <tr>
+                    <th>Historia de Usuario</th>
+                    <th>Criterios de Aceptación / Entregables</th>
+                    <th>Aceptado</th>
+                    <th>Rechazado</th>
+                </tr>
+                <tr>
+                    <td>Historia 1: Registro de Usuario</td>
+                    <td>
+                        1. El formulario permite registrar por correo y contraseña, además de la opción de vinculación  tiene reperacion de contraseñas.<br>
+                   
+                        2. Una vez registrado, el usuario recibe confirmación visible de que el proceso ha sido exitoso
+                         y se le redirige a la página de inicio.
+                    </td>
+                    <td>[X]</td>
+                    <td>[ ]</td>
+                </tr>
+                <tr>
+                    <td>Historia 2: Reserva de Cita</td>
+                    <td>
+                        1. El enlace para reservar cita en facebook,whatsapp ,gemail debe estar ubicado de manera destacada en la página de inicio y ser claramente accesible.<br>
+                        2. Al hacer clic, el enlace se redirige correctamente al chat de Instagram de la empresa sin interrupciones.<br>
+                        3. La dueña puede registrar manualmente las citas en el sistema una vez confirmadas con el cliente en el chat.
+                    </td>
+                    <td>[X]</td>
+                    <td>[ ]</td>
+                </tr>
+                <tr>
+                    <td>Historia 3: Visor de Citas</td>
+                    <td>
+                        1. El visor de citas debe mostrar claramente los detalles de cada cita.<br>
+                        2. El sistema permite al administrador ver las citas en tiempo real.
+                    </td>
+                    <td>[X]</td>
+                    <td>[ ]</td>
+                </tr>
+                <tr>
+                    <td>Historia 4: Registro de Citas y Empleados</td>
+                    <td>
+                        1. El sistema permite registrar mediante un formulario la cita del usuario.<br>
+                        2. Los empleados nuevos van a poder ser registrados de manera exitosa en el sistema por la recepcionista.
+                    </td>
+                    
+                    <td>[X]</td>
+                    <td>[ ]</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- HERRAMIENTAS -->
+        <div id="herramientas" class="content-section">
+            <h2>HERRAMIENTAS</h2>
+            <p>Para la retrospectiva del sprint se utilizaron las siguientes herramientas:</p>
+            <ul>
+                <li>Pizarra virtual colaborativa (Miro y Jira)</li>
+                <li>Plantilla de retrospectiva con las categorías: Seguir haciendo, Empezar a hacer, Dejar de hacer</li>
+                <li>Sistema de votación para priorizar mejoras</li>
+                <li>Documento compartido para registrar acuerdos</li>
+            </ul>
+        </div>
+
+        <!-- REUNIÓN DE RETROSPECTIVA -->
+        <div id="reunion" class="content-section">
+            <h2>Reunión de Retrospectiva del Sprint</h2>
+            <p>La reunión de retrospectiva se llevó a cabo el <strong>16 de mayo de 2025</strong> con la participación de todo el equipo Scrum:</p>
+            
+            <div class="improvement-box">
+                <h3>Dinámica de la reunión</h3>
+                <ol>
+                    <li>Revisión de los objetivos del sprint (10 min)</li>
+                    <li>Identificación de aspectos positivos a mantener (15 min)</li>
+                    <li>Detección de oportunidades de mejora (15 min)</li>
+                    <li>Discusión de problemas y obstáculos (15 min)</li>
+                    <li>Priorización y definición de acciones concretas (20 min)</li>
+                </ol>
+            </div>
+            
+            <div class="section-claseImagen">
+                <img src="../img/planificacionnnnnnn.png" alt="Reunión de retrospectiva" class="header-image">
+                <p class="image-caption">Equipo participando en la retrospectiva del sprint</p>
+            </div>
+        </div>
+
+        <!-- SALIDAS -->
+        <div id="salidas" class="content-section">
+            <h2>SALIDAS</h2>
+            <h3>Agreed Actionable Improvements</h3>
+            
+            <div class="action-item">
+                <span class="category-badge keep-doing">Seguir haciendo</span>
+                <h4>Mantener el enlace de reserva de citas en Instagram en una ubicación destacada en la página de inicio para fácil acceso</h4>
+                <p><strong>Responsable:</strong> Emily Lorena</p>
+            </div>
+            
+            <div class="action-item">
+                <span class="category-badge keep-doing">Seguir haciendo</span>
+                <h4>Continuar verificando que el enlace de reserva dirija correctamente al chat de Instagram sin interrupciones</h4>
+                <p><strong>Responsable:</strong> Emily Lorena</p>
+            </div>
+            
+            <div class="action-item">
+                <span class="category-badge keep-doing">Seguir haciendo</span>
+                <h4>Desarrollar y mantener un visor de citas que indique claramente los detalles de cada cita para mejor organización</h4>
+                <p><strong>Responsable:</strong> Giner Bush</p>
+            </div>
+            
+            <div class="action-item">
+                <span class="category-badge keep-doing">Seguir haciendo</span>
+                <h4>Asegurar que el sistema permita la visualización en tiempo real de las citas en el visor</h4>
+                <p><strong>Responsable:</strong> Danahe Arleni</p>
+            </div>
+            
+            <div class="action-item">
+                <span class="category-badge start-doing">Empezar a hacer</span>
+                <h4>Configurar el flujo de registro con Google de manera que se complete en dos pasos o menos para mayor eficiencia</h4>
+                <p><strong>Responsable:</strong> Alejandro Maycoll</p>
+            </div>
+            
+            <div class="action-item">
+                <span class="category-badge start-doing">Empezar a hacer</span>
+                <h4>Proporcionar una confirmación visual al usuario tras el registro y redirigirlo a la página de inicio</h4>
+                <p><strong>Responsable:</strong> Alejandro Maycoll</p>
+            </div>
+            
+            <div class="action-item">
+                <span class="category-badge start-doing">Empezar a hacer</span>
+                <h4>Implementar validaciones adicionales en el formulario de registro de empleados para evitar errores</h4>
+                <p><strong>Responsable:</strong> Danahe Arleni</p>
+            </div>
+            
+            <div class="action-item">
+                <span class="category-badge stop-doing">Dejar de hacer</span>
+                <h4>Evitar cambios de último momento en los criterios de aceptación sin consenso del equipo</h4>
+                <p><strong>Responsable:</strong> Todo el equipo</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.index-container {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.index-list {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.index-list h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+    border-bottom: 1px solid #34495e;
+    padding-bottom: 10px;
+}
+
+.index-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.index-item {
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.index-item:hover {
+    background-color: #34495e;
+}
+
+.content-area {
+    flex: 1;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+.content-section {
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #2980b9;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e6f7ff;
+}
+
+.retrospective-table td {
+    vertical-align: top;
+}
+
+.improvement-box {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-left: 4px solid #3498db;
+    margin: 15px 0;
+}
+
+.action-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    position: relative;
+    padding-left: 80px;
+}
+
+.category-badge {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.keep-doing {
+    background-color: #27ae60;
+    color: white;
+}
+
+.start-doing {
+    background-color: #f39c12;
+    color: white;
+}
+
+.stop-doing {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.header-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 15px 0;
+}
+
+.image-caption {
+    text-align: center;
+    font-style: italic;
+    color: #7f8c8d;
+    margin-top: -10px;
+}
+
+@media (max-width: 768px) {
+    .index-container {
+        flex-direction: column;
+    }
+    
+    .index-list {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .content-area {
+        padding: 20px;
+    }
+    
+    .action-item {
+        padding-left: 15px;
+        padding-top: 40px;
+    }
+    
+    .category-badge {
+        top: 10px;
+        left: 10px;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const indexItems = document.querySelectorAll('.index-item');
+    
+    indexItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                // Remove active class from all items
+                indexItems.forEach(i => i.classList.remove('active'));
+                
+                // Add active class to clicked item
+                this.classList.add('active');
+                
+                // Scroll to target section
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+    
+    // Highlight current section in index while scrolling
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY + 100;
+        
+        document.querySelectorAll('.content-section').forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                document.querySelectorAll('.index-item').forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('data-target') === sectionId) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+        });
+    });
+});
+</script>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
